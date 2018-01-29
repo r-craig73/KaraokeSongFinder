@@ -15,43 +15,38 @@
         <h3>Don't know which karaoke song to sing tonight?</h3>
         <h3>First, answer the two questions below...</h3>
       </div>
-      <form class="questions" action="index.html" method="post">
-        <div class="row">
-          <div class="col-sm-6">
-            <h5>What is your mood right now?</h5>
-            <select class="form-control" id="mood">
-              <!-- <option value="1">Relax</option> -->
-              <option value="1">Chill</option>
-              <option value="2">Party</option>
-            </select>
+
+        <div>
+          <div class="row">
+            <div class="col-sm-6">
+              <h5>What is your mood right now?</h5>
+              <select class="form-control" id="mood">
+                <option value="chill">Chill</option>
+                <option value="party">Party</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <h5>How is the vibe?</h5>
+              <select class="form-control" id="vibe">
+                <option value="alone">Solo or Alone</option>
+                <option value="bar">Bar</option>
+              </select>
+            </div>
           </div>
-          <div class="col-sm-6">
-            <h5>How is the vibe?</h5>
-            <select class="form-control" id="vibe">
-              <option value="1">Solo/Alone</option>
-              <!-- <option value="2">With Friends</option> -->
-              <option value="2">Large group</option>
-            </select>
-          </div>
-        </div>
-        <br>
-        <br>
-      <h4>Now press the "Show me Songs!" button to view your song(s)!</h4>
-        <button class="btn btn-warning">Show me Songs!</button>
-        <br>
-        <br>
-        <div class="song-results">
-          <ol>
-            <li>Song #1</li>
-          </ol>
-        </div>
-      <h4>Or you can press the "Random!" button to select a ramdom song.</h4>
-          <button class="btn btn-danger">Random!</button>
+
+        <button class="btn btn-warning" id="show">Show me Songs!</button>
+      </div>
+
+      <div id="song-results">
+          <p></p>
+      </div>
+
+        <!-- <h4>Or you can press the "Random!" button to select a ramdom song.</h4>
+          <button class="btn btn-danger" id="button-2">Random!</button>
           <br>
           <div class="random-song">
             <h4>Random Song here!</h4>
-          </div>
-      </form>
+          </div> -->
     </div>
   </body>
 </html>
