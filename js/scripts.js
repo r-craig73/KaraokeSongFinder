@@ -1,3 +1,4 @@
+
 // biz logic
   function Song(mood, vibe) {
     this.mood = mood;
@@ -49,3 +50,5 @@ var randomSong = function() {
 
 //ui logic
 $(document).ready(function() {
+  
+
