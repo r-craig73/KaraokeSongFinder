@@ -1,9 +1,12 @@
+// biz logic
+  function Song(name, artist, album) {
+    this.songName = name;
+    this.artist = artist;
+    this.album = album;
+    this.category = category;
+  }
 
-// // biz logic
-//   function Song(mood, vibe) {
-//     this.mood = mood;
-//     this.vibe = vibe;
-//   }
+// var chillBar = [];
 
 var chillBar = [
   "Song 1",
@@ -29,13 +32,15 @@ var partyAlone = [
   "Song 12",
 ];
 
+var
+
 var allSongs = [
   "Song1", "Song2", "Song3", "Song4", "Song5", "Song6", "Song7", "Song8", "Song9", "Song10", "Song11", "Song12",
 ];
 
-var randomSong = function() {
-  chillBar[Math.floor(Math.random()*chillBar.length)];
-}
+// var randomSong = function() {
+//   chillBar[Math.floor(Math.random()*chillBar.length)];
+// }
 
 var chillBarRandom = chillBar[Math.floor(Math.random()*chillBar.length)];
 var partyBarRandom = partyBar[Math.floor(Math.random()*partyBar.length)];
@@ -47,12 +52,12 @@ var songRecommendation = function(anyMood, anyVibe) {
     return ("You should sing " + chillBarRandom + "!");
   } else if (anyMood === "chill" && anyVibe === "alone") {
     return ("You should sing " + chillAloneRandom + "!");
-  } else if (anyMood === "party" && anyVibe === "bar") {
+  } else if (anyMood === "party" && anyVibe === "bar" ) {
     return ("You should sing " + partyBarRandom + "!");
   } else if (anyMood === "party" && anyVibe === "alone") {
     return ("You should sing " + partyAloneRandom + "!");
   } else {
-    return("Tell us your mood and vibe and try again");
+    return("Tell us your mood and vibe and try again.");
   }
 };
 
@@ -69,7 +74,6 @@ $(document).ready(function() {
     var reset = function () {
       $("select#mood").val("");
       $("select#vibe").val("");
-      // $("#song-results").text();
     }
 
     reset();
@@ -80,4 +84,5 @@ $(document).ready(function() {
 
     $("#song-random").text(allSongsRandom);
   });
+
 });
