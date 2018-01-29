@@ -29,12 +29,21 @@ var partyAlone = [
   "Song 12",
 ];
 
-var chillBar = chill[Math.floor(Math.random()*chill.length)];
-var bar = bar[Math.floor(Math.random()*bar.length)];
+var chillBar = chillBar[Math.floor(Math.random()*chillBar.length)];
+var partyBar = partyBar[Math.floor(Math.random()*partyBar.length)];
+var chillAlone = chillAlone[Math.floor(Math.random()*chillAlone.length)];
+var partyAlone = partyAlone[Math.floor(Math.random()*partyAlone.length)];
 
 var randomSong = function() {
   if ("input#mood" === chill && "input#vibe" === bar) {
     return ("You should sing " + chillBar + "!");
+  } else if ("input#mood" === chill && "input#vibe" === alone) {
+    return ("You should sing " + chillAlone + "!");
+  } else if ("input#mood" === party && "input#vibe" === bar) {
+    return ("You should sing " + partyBar + "!");
+  } else if ("input#mood" === party && "input#vibe" === alone) {
+    return ("You should sing " + partyAlone + "!");
+    else {
   }
 }
 
