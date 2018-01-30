@@ -136,6 +136,7 @@ $(document).ready(function() {
   });
 
   $("button#show-song").click(function() {
+
     $("#song-results").show();
     var moodSelection = parseInt($("select#mood").val());
     var vibeSelection = parseInt($("select#vibe").val());
@@ -149,16 +150,16 @@ $(document).ready(function() {
     $("#song-results").text(result);
 
     $("#try-again").show();
-    $("#lyrics").show();
+    $("#find-lyrics").show();
 
     var reset = function() {
       $("select#mood").val("");
       $("select#vibe").val("");
       $("select#intox").val("");
     }
-    reset();
-    $("#lyrics-well").show();
-    $("span#lyrics").show();
+    // reset();
+    // $("#lyrics-well").show();
+    // $("span#lyrics").show();
 
   });
 
@@ -169,9 +170,13 @@ $(document).ready(function() {
 
   });
 
+  $("button#find-lyrics").click(function() {
+    $("#lyric-search").show();
+  });
 
   $("#lyric-search").submit(function(event) {
     event.preventDefault();
+
     var songSearch = $("input#song").val();
     console.log(songSearch);
     var artistSearch = $("input#artist").val();

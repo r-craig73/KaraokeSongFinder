@@ -47,14 +47,18 @@
    display: none;
  }
 
-#lyrics {
-  display: none;
-}
-
 body {
   background-color: #757575;
 }
 
 .form-questions {
+  display: none;
+}
+
+#lyric-search {
+  display: none;
+}
+
+#find-lyrics {
   display: none;
 }

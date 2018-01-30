@@ -88,42 +88,42 @@
             <button class="btn btn-info" id="try-again">Try again!</button>
           </div>
           <div class="col-md-6">
-            <button class="btn btn-info" id="lyrics">Find the lyrics!</button>
+            <button class="btn btn-info" id="find-lyrics">Find the lyrics!</button>
           </div>
         </div>
       </div>
 
       <!-- if try again button is clicked - goes back to original screen-->
 
-      <!-- if lyrics button is clicked-->
+      <!-- if lyrics button is clicked -->
+      <div>
+        <form id="lyric-search">
+          <div class="form-group">
+            <label for="song">Enter a song:</label>
+            <input id="song" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="artist">Enter the artist:</label>
+            <input id="artist" class="form-control" type="text">
+          </div>
+
+          <button id="lyrics" type="submit" class="btn btn-info">Show me the lyrics!</button>
+        </form>
+      </div>
+
+    <div class="result">
+    </div>
 
 
 
-
-
-    <!-- <div class="well" id="lyrics-well">
+<!--
+    <div class="well" id="lyrics-well">
       <div class="container" id="container-four">
         <p>Here are the lyrics</p>
         <span id="lyrics"></span>
       </div>
-    </div> -->
+    <! </div> -->
 
-<!--
-      <form id="lyric-search">
-        <div class="form-group">
-          <label for="song">Enter a song:</label>
-          <input id="song" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label for="artist">Enter the artist:</label>
-          <input id="artist" class="form-control" type="text">
-        </div>
 
-        <button id="lyrics" type="submit" class="btn btn-info">Show me the lyrics!</button>
-      </form> -->
-
-      <div class="result">
-      </div>
-    </div>
   </body>
 </html>
