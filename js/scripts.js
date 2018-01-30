@@ -136,7 +136,6 @@ $(document).ready(function() {
   });
 
   $("button#show-song").click(function() {
-
     $("#song-results").show();
     var moodSelection = parseInt($("select#mood").val());
     var vibeSelection = parseInt($("select#vibe").val());
@@ -164,10 +163,10 @@ $(document).ready(function() {
   });
 
   $("button#random").click(function() {
-    var allSongsRandom = allSongs[Math.floor(Math.random()*allSongs.length)];
-    $("#lyrics-well").show();
-    $("#song-random").text(allSongsRandom);
-
+    var allSongsRandom = allSongs[Math.floor(Math.random()*allSongs.length)]
+    $("#song-results").text(allSongsRandom);
+    $("#try-again").show();
+    $("#find-lyrics").show();
   });
 
   $("button#find-lyrics").click(function() {
