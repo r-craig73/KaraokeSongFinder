@@ -37,21 +37,15 @@
    padding-bottom: 20px;
  }
 
-#lyrics {
+/*#lyrics, #song-results {
   display: hide;
-}
+}*/
 
  #try-again {
    width: 100%;
- }
-
- #lyrics-well {
    display: none;
  }
 
-/*body {
-  background-image: url("../img/brickwall.jpg");
-}*/
 
 .result {
   color: white;
@@ -67,5 +61,22 @@
 }
 
 #litgif {
+  display: none;
+}
+
+body {
+  background-color: #757575;
+}
+
+.form-questions {
+  display: none;
+}
+
+#lyric-search {
+  display: none;
+}
+
+#find-lyrics {
+
   display: none;
 }

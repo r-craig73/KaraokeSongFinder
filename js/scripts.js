@@ -143,7 +143,13 @@ Song.prototype.textResponse = function(chillRandom, partyRandom, litRandom) {
 
 //ui logic
 $(document).ready(function() {
-  $("button#show").click(function() {
+
+  $("button#show-form").click(function() {
+    $(".form-questions").show();
+  });
+
+  $("button#show-song").click(function() {
+    $("#song-results").show();
     var moodSelection = parseInt($("select#mood").val());
     var vibeSelection = parseInt($("select#vibe").val());
     var drunkSelection = parseInt($("select#intox").val());
@@ -157,26 +163,34 @@ $(document).ready(function() {
     $("#song-results").text(result);
     $("#text-result").text(newSong.textResponse(partyRandom, litRandom));
 
+    $("#try-again").show();
+    $("#find-lyrics").show();
+
     var reset = function() {
       $("select#mood").val("");
       $("select#vibe").val("");
       $("select#intox").val("");
     }
-    reset();
 
-    $("#lyrics-well").show();
-    $("span#lyrics").show();
-    
+    // reset();
+    // $("#lyrics-well").show();
+    // $("span#lyrics").show();
   });
 
   $("button#random").click(function() {
-    var allSongsRandom = allSongs[Math.floor(Math.random()*allSongs.length)];
-    $("#song-random").text(allSongsRandom);
+    var allSongsRandom = allSongs[Math.floor(Math.random()*allSongs.length)]
+    $("#song-results").text(allSongsRandom);
+    $("#try-again").show();
+    $("#find-lyrics").show();
   });
 
+  $("button#find-lyrics").click(function() {
+    $("#lyric-search").show();
+  });
 
   $("#lyric-search").submit(function(event) {
     event.preventDefault();
+
     var songSearch = $("input#song").val();
     console.log(songSearch);
     var artistSearch = $("input#artist").val();
