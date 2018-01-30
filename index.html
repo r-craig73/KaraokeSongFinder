@@ -23,8 +23,11 @@
               <div class="well" id="left-title-well">
                 <h5>What is your mood right now?</h5>
                 <select class="form-control" id="mood">
-                  <option value="chill">Chill</option>
-                  <option value="party">Party</option>
+                  <option value="1">A little down</option>
+                  <option value="2">Chill</option>
+                  <option value="3">Waking up...</option>
+                  <option value="4">Ready for a good time</option>
+                  <option value="5">Party!</option>
                 </select>
               </div>
             </div>
@@ -32,57 +35,72 @@
               <div class="well" id="right-title-well">
                 <h5>How is the vibe?</h5>
                 <select class="form-control" id="vibe">
-                  <option value="alone">Solo or alone</option>
-                  <option value="bar">Bar or group</option>
+                  <option value="1">Solo, chill bedroom star</option>
+                  <option value="2">Small group of friends</option>
+                  <option value="3">Heating up</option>
+                  <option value="4">House party</option>
+                  <option value="5">Burning down the house</option>
                 </select>
               </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
               <div class="well" id="bottom-left-title-well">
                 <br>
                 <h5>Rate your intoxication</h5>
                 <select class="form-control" id="intox">
-                  <option value="sober">Sober</option>
-                  <option value="drunk">Drunk</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="well" id="bottom-right-title-well">
-                <br>
-                <h5>Solo or duet?</h5>
-                <select class="form-control" id="solo-duet">
-                  <option value="solo">Solo</option>
-                  <option value="duet">Duet</option>
+                  <option value="1">Sober</option>
+                  <option value="2">A little tipsy</option>
+                  <option value="3">A few drinks in</option>
+                  <option value="4">Definitely feeling it</option>
+                  <option value="5">Please take my keys away</option>
                 </select>
               </div>
             </div>
           </div>
 
-        <br>
-        <button class="btn btn-warning" id="show">Show me songs!</button>
-      </div>
+            <br>
+            <button class="btn btn-warning" id="show">Show me songs!</button>
+            <br>
+            <br>
 
-      <div id="song-results">
-          <p></p>
-      </div>
+            <br>
 
-      <div>
-        <button class="btn btn-warning" id="random">Show me a random song!</button>
-        <div id="song-random">
-          <p></p>
+    <div class="container" id="container-three">
+      <div class="well" id="result-well">
+        <h4 id="result-heading">Result:</h4> <!--Wording will get changed-->
+          <p id="song-results"> </p>
+          <div id="song-random">
+            <p></p>
+            </div>
         </div>
       </div>
-
-        <!-- <h4>Or you can press the "Random!" button to select a ramdom song.</h4>
-          <button class="btn btn-danger" id="button-2">Random!</button>
-          <br>
-          <div class="random-song">
-            <h4>Random Song here!</h4>
-          </div> -->
     </div>
+
+    <br>
+
+    <div class="container" id="result-container">
+    <div class="row">
+      <div class="col-md-6">
+      <button class="btn btn-warning" id="random">Show me a random song!</button>
+      <div id="song-random">
+        <p></p>
+        </div>
+      </div>
+      <div class="col-md-6">
+      <button class="btn btn-warning" id="try-again">Try again!</button>
+    </div>
+  </div>
+</div>
+
   </body>
 </html>
+
+<!-- <h4>Or you can press the "Random!" button to select a ramdom song.</h4>
+  <button class="btn btn-danger" id="button-2">Random!</button>
+  <br>
+  <div class="random-song">
+    <h4>Random Song here!</h4>
+  </div> -->

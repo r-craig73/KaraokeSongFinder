@@ -3,14 +3,36 @@
   background-color: #A569BD;
 }
 
-.well {
+.well{
   text-align: center;
+}
+
+#show {
+  width: 100%;
+}
+
+#random {
+  width: 100%;
 }
 
  #container-two {
    background-color: #3498DB;
    padding-top: 20px;
    padding-bottom: 20px;
+ }
+
+ #container-three {
+   background-color: #82E0AA;
+   padding-top: 20px;
+   padding-bottom: 20px;
+ }
+
+ #result-heading {
+   text-decoration: underline;
+ }
+
+ #try-again {
+   width: 100%;
  }
 
 body {
