@@ -32,7 +32,6 @@ var partyAlone = [
   "Frank Sinatra: My Way",
 ];
 
-var
 
 var allSongs = [
   "Song1", "Song2", "Song3", "Song4", "Song5", "Song6", "Song7", "Song8", "Song9", "Song10", "Song11", "Song12",
