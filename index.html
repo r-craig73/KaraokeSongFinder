@@ -3,6 +3,7 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
     <title>Karaoke Song Finder</title>
@@ -110,5 +111,20 @@
   </div>
 
 
+    <form id="lyric-search">
+      <div class="form-group">
+        <label for="song">Enter a song:</label>
+        <input id="song" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="artist">Enter the artist:</label>
+        <input id="artist" class="form-control" type="text">
+      </div>
+
+      <button id="lyrics" type="submit" class="btn btn-info">Show me the lyrics!</button>
+    </form>
+
+    <div class="result">
+    </div>
   </body>
 </html>
