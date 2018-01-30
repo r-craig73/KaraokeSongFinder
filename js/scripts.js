@@ -130,7 +130,13 @@ Song.prototype.songRecommendation = function(score) {
 
 //ui logic
 $(document).ready(function() {
-  $("button#show").click(function() {
+
+  $("button#show-form").click(function() {
+    $(".form-questions").show();
+  });
+
+  $("button#show-song").click(function() {
+    $("#song-results").show();
     var moodSelection = parseInt($("select#mood").val());
     var vibeSelection = parseInt($("select#vibe").val());
     var drunkSelection = parseInt($("select#intox").val());
@@ -141,6 +147,9 @@ $(document).ready(function() {
 
     var result = newSong.songRecommendation(newScore);
     $("#song-results").text(result);
+
+    $("#try-again").show();
+    $("#lyrics").show();
 
     var reset = function() {
       $("select#mood").val("");
@@ -155,7 +164,9 @@ $(document).ready(function() {
 
   $("button#random").click(function() {
     var allSongsRandom = allSongs[Math.floor(Math.random()*allSongs.length)];
+    $("#lyrics-well").show();
     $("#song-random").text(allSongsRandom);
+
   });
 
 
@@ -192,7 +203,7 @@ $(document).ready(function() {
 
     $('.result').text(ajaxCall())
   });
-  
+
   $("button#try-again").click(function() {
     location.reload();
   });

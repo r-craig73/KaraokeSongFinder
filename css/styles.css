@@ -34,9 +34,9 @@
    padding-bottom: 20px;
  }
 
-#lyrics {
+/*#lyrics, #song-results {
   display: hide;
-}
+}*/
 
  #result-heading {
    text-decoration: underline;
@@ -44,12 +44,17 @@
 
  #try-again {
    width: 100%;
- }
-
- #lyrics-well {
    display: none;
  }
 
+#lyrics {
+  display: none;
+}
+
 body {
-  background-image: url("../img/brickwall.jpg");
+  background-color: #757575;
+}
+
+.form-questions {
+  display: none;
 }
