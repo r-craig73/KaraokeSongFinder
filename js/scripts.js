@@ -148,12 +148,16 @@ $(document).ready(function() {
       $("select#intox").val("");
     }
     reset();
+    $("#lyrics-well").show();
+    $("span#lyrics").show();
+
   });
 
   $("button#random").click(function() {
     var allSongsRandom = allSongs[Math.floor(Math.random()*allSongs.length)];
     $("#song-random").text(allSongsRandom);
   });
+
 
   $("#lyric-search").submit(function(event) {
     event.preventDefault();
@@ -188,6 +192,12 @@ $(document).ready(function() {
 
     $('.result').text(ajaxCall())
   });
+  
+  $("button#try-again").click(function() {
+    location.reload();
+  });
+
+
 });
 
 

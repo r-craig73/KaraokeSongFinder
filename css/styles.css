@@ -27,12 +27,27 @@
    padding-bottom: 20px;
  }
 
+ #container-four {
+   /*display: hide;*/
+   background-color: #E83E8C;
+   padding-top: 20px;
+   padding-bottom: 20px;
+ }
+
+#lyrics {
+  display: hide;
+}
+
  #result-heading {
    text-decoration: underline;
  }
 
  #try-again {
    width: 100%;
+ }
+
+ #lyrics-well {
+   display: none;
  }
 
 body {
