@@ -147,11 +147,18 @@ $(document).ready(function() {
       $("select#intox").val("");
     }
     reset();
+    $("#lyrics-well").show();
+    $("span#lyrics").show();
+
   });
 
   $("button#random").click(function() {
     var allSongsRandom = allSongs[Math.floor(Math.random()*allSongs.length)];
     $("#song-random").text(allSongsRandom);
+  });
+
+  $("button#try-again").click(function() {
+    location.reload();
   });
 
 });

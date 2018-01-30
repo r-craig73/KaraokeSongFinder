@@ -8,6 +8,7 @@
     <title>Karaoke Song Finder</title>
   </head>
   <body>
+    <!--Heading/top container-->
     <div class="container" id="container-one">
       <div class="jumbotron">
         <h1>Welcome to Karaoke Song Finder!</h1>
@@ -16,14 +17,13 @@
         <h3>First, answer the two questions below...</h3>
       </div>
     </div>
-
+    <!--Mood-->
         <div class="container" id="container-two">
           <div class="row">
             <div class="col-sm-6">
               <div class="well" id="left-title-well">
                 <h5>What is your mood right now?</h5>
                 <select class="form-control" id="mood">
-
 
                   <option value="1">A little down</option>
                   <option value="2">Chill</option>
@@ -50,26 +50,26 @@
             </div>
           </div>
 
+
+          <!--Intoxication meter + button-->
           <div class="row">
             <div class="col-sm-12">
-              <div class="well" id="bottom-left-title-well">
+              <div class="well" id="intox-well">
                 <br>
                 <h5>Rate your intoxication</h5>
                 <select class="form-control" id="intox">
-
                   <option value="1">Sober</option>
                   <option value="2">A little tipsy</option>
                   <option value="3">A few drinks in</option>
                   <option value="4">Definitely feeling it</option>
                   <option value="5">Please take my keys away</option>
-
                 </select>
               </div>
             </div>
           </div>
 
             <br>
-            <button class="btn btn-warning" id="show">Show me songs!</button>
+            <button class="btn btn-warning" id="show">Show me my song!</button>
             <br>
             <br>
 
@@ -84,7 +84,7 @@
             </div>
         </div>
       </div>
-    </div>
+    </div> <!--closes main container-->
 
     <br>
 
@@ -100,14 +100,15 @@
       <button class="btn btn-warning" id="try-again">Try again!</button>
     </div>
   </div>
-</div>
+  </div>
+
+  <div class="well" id="lyrics-well">
+    <div class="container" id="container-four">
+      <p>Here are the lyrics</p>
+      <span id="lyrics"></span>
+    </div>
+  </div>
+
 
   </body>
 </html>
-
-<!-- <h4>Or you can press the "Random!" button to select a ramdom song.</h4>
-  <button class="btn btn-danger" id="button-2">Random!</button>
-  <br>
-  <div class="random-song">
-    <h4>Random Song here!</h4>
-  </div> -->
