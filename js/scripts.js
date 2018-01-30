@@ -136,6 +136,7 @@ $(document).ready(function() {
     var drunkSelection = parseInt($("select#intox").val());
 
     var newScore = (moodSelection + vibeSelection + drunkSelection);
+    console.log(newScore);
     var newSong = new Song(moodSelection, vibeSelection, drunkSelection, newScore);
 
     var result = newSong.songRecommendation(newScore);
@@ -154,4 +155,66 @@ $(document).ready(function() {
     $("#song-random").text(allSongsRandom);
   });
 
+  $("button#lyrics").click(function() {
+    var songSearch = $("input#song").val();
+    var artistSearch = $("input#artist").val();
+
+    var ajaxCall = function(apiData) {
+    var apikey = 'ac2764373bf0a3d6a7fd0aa221e48c34';
+    var result = $.ajax({
+      type: "GET",
+      data: apiData,
+      data: {
+          apikey: apikey,
+          q_track: songSearch,
+          q_artist: artistSearch,
+          format:"jsonp",
+          callback:"jsonp_callback"
+      },
+      url: "http://api.musixmatch.com/ws/1.1/matcher.lyrics.get",
+      dataType: "jsonp",
+      jsonpCallback: 'jsonp_callback',
+      contentType: 'application/json',
+      success: function(data) {
+          console.log(data);
+      }
+    }).then(function(res) {
+      $('.result').text(res.message.body.lyrics.lyrics_body);
+    });
+  };
+
+    $('.result').text(ajaxCall())
 });
+
+
+
+
+//   $.ajax({
+//     type: "GET"
+//     data: {
+//       apikey:"445d6196c08dc2b7490929f18149d684",
+//       q_artist: songSearch,
+//       format:"jsonp",
+//       callback:"jsonp_callback"
+//     },
+//     url: "http//api.musixmatch.com/ws/1.1/track.search",
+//     datatype: "jsonp",
+//     jsonpCallback: "jsonp_callback",
+//     success: function(data) {
+//       ?
+//     },
+//   });
+// };
+//
+// function getLyrics() {
+//   var trackId = document.getElementById("lyrics").textContent;
+//
+//   $.ajax({
+//     type: "GET",
+//     data: {
+//       apikey: ""
+//       track_id: trackId
+//       format:
+//     }
+//   })
+// }
