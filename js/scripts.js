@@ -9,27 +9,27 @@
 // var chillBar = [];
 
 var chillBar = [
-  "Song 1",
-  "Song 2",
-  "Song 3",
+  "Drake: Hotline Bling",
+  "Dolly Parton: 9 to 5",
+  "Carrie Underwood: Before He Cheats",
 ];
 
 var chillAlone = [
-  "Song 4",
-  "Song 5",
-  "Song 6",
+  "Jason Mraz: I'm Yours",
+  "Frank Sinatra: My Way",
+  "Fleetwood Mac: Go Your Own Way",
 ];
 
 var partyBar = [
-  "Song 7",
-  "Song 8",
-  "Song 9",
+  "The Commodores: Brickhouse",
+  "Young MC: Bust A Move",
+  "Miley Cyrus: Party in the USA",
 ];
 
 var partyAlone = [
-  "Song 10",
-  "Song 11",
-  "Song 12",
+  "Sia: Chandelier",
+  "Don McLean: American Pie",
+  "Frank Sinatra: My Way",
 ];
 
 var

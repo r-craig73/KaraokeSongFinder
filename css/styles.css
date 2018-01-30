@@ -1,0 +1,18 @@
+.jumbotron {
+  text-align: center;
+  background-color: #A569BD;
+}
+
+.well {
+  text-align: center;
+}
+
+ #container-two {
+   background-color: #3498DB;
+   padding-top: 20px;
+   padding-bottom: 20px;
+ }
+
+body {
+  background-image: url("../img/brickwall.jpg");
+}

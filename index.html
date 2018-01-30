@@ -8,33 +8,40 @@
     <title>Karaoke Song Finder</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container-one">
       <div class="jumbotron">
-        <h2>Welcome to Karaoke Song Finder!</h2>
+        <h1>Welcome to Karaoke Song Finder!</h1>
         <br>
         <h3>Don't know which karaoke song to sing tonight?</h3>
         <h3>First, answer the two questions below...</h3>
       </div>
+    </div>
 
-        <div>
+        <div class="container" id="container-two">
           <div class="row">
             <div class="col-sm-6">
-              <h5>What is your mood right now?</h5>
-              <select class="form-control" id="mood">
-                <option value="chill">Chill</option>
-                <option value="party">Party</option>
-              </select>
+              <div class="well" id="left-title-well">
+                <h5>What is your mood right now?</h5>
+                <select class="form-control" id="mood">
+                  <option value="chill">Chill</option>
+                  <option value="party">Party</option>
+                </select>
+              </div>
             </div>
             <div class="col-sm-6">
-              <h5>How is the vibe?</h5>
-              <select class="form-control" id="vibe">
-                <option value="alone">Small crowd or alone</option>
-                <option value="bar">Bar</option>
-              </select>
+
+              <div class="well" id="right-title-well">
+                <h5>How is the vibe?</h5>
+                <select class="form-control" id="vibe">
+                  <option value="alone">Solo or alone</option>
+                  <option value="bar">Bar or group</option>
+                </select>
+              </div>
             </div>
           </div>
 
-        <button class="btn btn-warning" id="show">Show me Songs!</button>
+        <br>
+        <button class="btn btn-warning" id="show">Show me songs!</button>
       </div>
 
       <div id="song-results">
