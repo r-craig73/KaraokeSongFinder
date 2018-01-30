@@ -1,11 +1,13 @@
+// biz logic
+  function Song(name, artist, album) {
+    this.songName = name;
+    this.artist = artist;
+    this.album = album;
+    this.category = category;
+  }
 
-// // biz logic
-//   function Song(mood, vibe) {
-//     this.mood = mood;
-//     this.vibe = vibe;
-//   }
+// var chillBar = [];
 
-//mood
 var chillBar = [
   "Drake: Hotline Bling",
   "Dolly Parton: 9 to 5",
@@ -30,25 +32,33 @@ var partyAlone = [
   "Frank Sinatra: My Way",
 ];
 
+var
+
+var allSongs = [
+  "Song1", "Song2", "Song3", "Song4", "Song5", "Song6", "Song7", "Song8", "Song9", "Song10", "Song11", "Song12",
+];
+
+// var randomSong = function() {
+//   chillBar[Math.floor(Math.random()*chillBar.length)];
+// }
+
 var chillBarRandom = chillBar[Math.floor(Math.random()*chillBar.length)];
 var partyBarRandom = partyBar[Math.floor(Math.random()*partyBar.length)];
 var chillAloneRandom = chillAlone[Math.floor(Math.random()*chillAlone.length)];
 var partyAloneRandom = partyAlone[Math.floor(Math.random()*partyAlone.length)];
 
-
-var randomSong = function(anyMood, anyVibe) {
+var songRecommendation = function(anyMood, anyVibe) {
   if (anyMood === "chill" && anyVibe === "bar") {
     return ("You should sing " + chillBarRandom + "!");
   } else if (anyMood === "chill" && anyVibe === "alone") {
     return ("You should sing " + chillAloneRandom + "!");
-  } else if (anyMood === "party" && anyVibe === "bar") {
+  } else if (anyMood === "party" && anyVibe === "bar" ) {
     return ("You should sing " + partyBarRandom + "!");
   } else if (anyMood === "party" && anyVibe === "alone") {
     return ("You should sing " + partyAloneRandom + "!");
   } else {
-    return("not working");
+    return("Tell us your mood and vibe and try again.");
   }
-
 };
 
 //ui logic
@@ -57,10 +67,22 @@ $(document).ready(function() {
     var moodSelection = $("select#mood").val();
     var vibeSelection = $("select#vibe").val();
 
-    var result = randomSong(moodSelection, vibeSelection)
+    var result = songRecommendation(moodSelection, vibeSelection)
 
     $("#song-results").text(result);
+
+    var reset = function () {
+      $("select#mood").val("");
+      $("select#vibe").val("");
+    }
+
+    reset();
   });
 
+  $("button#random").click(function() {
+    var allSongsRandom = allSongs[Math.floor(Math.random()*allSongs.length)];
+
+    $("#song-random").text(allSongsRandom);
+  });
 
 });
