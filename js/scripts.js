@@ -155,9 +155,12 @@ $(document).ready(function() {
     $("#song-random").text(allSongsRandom);
   });
 
-  $("button#lyrics").click(function() {
+  $("#lyric-search").submit(function(event) {
+    event.preventDefault();
     var songSearch = $("input#song").val();
+    console.log(songSearch);
     var artistSearch = $("input#artist").val();
+    console.log(artistSearch);
 
     var ajaxCall = function(apiData) {
     var apikey = 'ac2764373bf0a3d6a7fd0aa221e48c34';
@@ -184,6 +187,7 @@ $(document).ready(function() {
   };
 
     $('.result').text(ajaxCall())
+  });
 });
 
 
