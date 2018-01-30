@@ -128,6 +128,19 @@ Song.prototype.songRecommendation = function(score) {
   }
 };
 
+Song.prototype.textResponse = function(chillRandom, partyRandom, litRandom) {
+  if (this.songRecommendation() === chillRandom) {
+    return ("This is a chill song");
+    console.log(this.score);
+  } else if (this.songRecommendation() === partyRandom) {
+    return ("This is a party song.");
+  } else if (this.songRecommendation() === litRandom) {
+    return ("This is a lit song");
+  } else {
+    return("this is not working");
+  }
+};
+
 //ui logic
 $(document).ready(function() {
   $("button#show").click(function() {
@@ -140,7 +153,9 @@ $(document).ready(function() {
     var newSong = new Song(moodSelection, vibeSelection, drunkSelection, newScore);
 
     var result = newSong.songRecommendation(newScore);
+
     $("#song-results").text(result);
+    $("#text-result").text(newSong.textResponse(partyRandom, litRandom));
 
     var reset = function() {
       $("select#mood").val("");
@@ -148,9 +163,10 @@ $(document).ready(function() {
       $("select#intox").val("");
     }
     reset();
+
     $("#lyrics-well").show();
     $("span#lyrics").show();
-
+    
   });
 
   $("button#random").click(function() {
@@ -192,43 +208,9 @@ $(document).ready(function() {
 
     $('.result').text(ajaxCall())
   });
-  
+
   $("button#try-again").click(function() {
     location.reload();
   });
 
-
 });
-
-
-
-
-//   $.ajax({
-//     type: "GET"
-//     data: {
-//       apikey:"445d6196c08dc2b7490929f18149d684",
-//       q_artist: songSearch,
-//       format:"jsonp",
-//       callback:"jsonp_callback"
-//     },
-//     url: "http//api.musixmatch.com/ws/1.1/track.search",
-//     datatype: "jsonp",
-//     jsonpCallback: "jsonp_callback",
-//     success: function(data) {
-//       ?
-//     },
-//   });
-// };
-//
-// function getLyrics() {
-//   var trackId = document.getElementById("lyrics").textContent;
-//
-//   $.ajax({
-//     type: "GET",
-//     data: {
-//       apikey: ""
-//       track_id: trackId
-//       format:
-//     }
-//   })
-// }
