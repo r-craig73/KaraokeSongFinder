@@ -5,15 +5,20 @@
 ### A website helping a user select a karaoke song, based on the user's
 ### mood and vibe.
 
-## Specifications
-  1. Establish HTML and create input fields for "vibe" and "mood"
-  2. Create submission buttons for "show songs" and "random"
-  3. Initialize front-end JavaScript functionality and add click functions to buttons
-    *
-    *
-
+## App goals
+### Things we need:
+  1. Input fields for "vibe", mood" and "intoxication"
+  2. Buttons to direct the user to answer questions, show a random song, show a song after answering questions and partial lyrics.
+  3. Use a function formula to pick a song based one vibe, mood and intoxication conditions.
+  4. Use a function formula to pick a random song
+  5. Implement an API to display lyrics to popular songs
+  6. Use CSS and Bootstrap to create a visually appealing, polished product
+  7.
 
 ### Need
+  1.
+
+### Wishlist
 
 ## Known Bugs
 _None at the moment_

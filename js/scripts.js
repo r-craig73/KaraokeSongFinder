@@ -1,10 +1,12 @@
 // biz logic
-function Song(name, artist, album, score) {
+function Song(name, artist, score, album) {
   this.songName = name;
   this.artist = artist;
-  this.album = album;
   this.score = score;
+  this.album = album;
+
 }
+
 
 var chill = [
   "Drake: Hotline Bling",
