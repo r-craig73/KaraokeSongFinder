@@ -265,6 +265,28 @@ $(document).ready(function() {
     location.reload();
   });
 
+  $("button#try-again").click(function() {
+    location.reload();
+  });
+
+  $("#lyric-add").submit(function(event) {
+    event.preventDefault();
+    var playlists = [];
+    var addArtist = $("input#add-artist").val();
+    var addSong = $("input#add-song").val();
+    var newSongFormat = addArtist.concat(": " + addSong);
+    newSongFormat.toString();
+    console.log(newSongFormat);
+    console.log("Your request has been submitted!");
+    playlists.push(newSongFormat);
+    $("span#ns-input-span").text(playlists);
+    console.log(playlists);
+  });
+
+
+
+
+
 });
 
 
@@ -282,25 +304,3 @@ $(document).ready(function() {
 //   console.log(data.data[0].images.original.url);
 //
 // }
-
-  $("button#try-again").click(function() {
-    location.reload();
-  });
-
-  $("#lyric-add").submit(function(event) {
-    event.preventDefault();
-    var playlists = [];
-    var addArtist = $("input#add-artist").val();
-    var addSong = $("input#add-song").val();
-    var newSongFormat = addArtist.concat(": " + addSong);
-    newSongFormat.toString();
-    console.log(newSongFormat);
-    console.log("Your request has been submitted!");
-    playlists.push(newSongFormat);
-    $("span#ns-input-span").text(playlists);
-    console.log(playlists);
-
-});
-
-
-});
