@@ -131,7 +131,7 @@ Song.prototype.songRecommendation = function(score) {
 Song.prototype.textResponse = function(chillRandom, partyRandom, litRandom) {
   if (this.songRecommendation() === chillRandom) {
     return ("This is a chill song");
-    console.log(this.score);
+    console.log(this.songRecommendation());
   } else if (this.songRecommendation() === partyRandom) {
     return ("This is a party song.");
   } else if (this.songRecommendation() === litRandom) {
@@ -150,6 +150,7 @@ $(document).ready(function() {
 
   $("button#show-song").click(function() {
     $("#song-results").show();
+    $("#karaoke-gif").show();
     var moodSelection = parseInt($("select#mood").val());
     var vibeSelection = parseInt($("select#vibe").val());
     var drunkSelection = parseInt($("select#intox").val());
@@ -161,7 +162,7 @@ $(document).ready(function() {
     var result = newSong.songRecommendation(newScore);
 
     $("#song-results").text(result);
-    $("#text-result").text(newSong.textResponse(partyRandom, litRandom));
+    $("#text-result").text(newSong.textResponse(chillRandom, partyRandom, litRandom));
 
     $("#try-again").show();
     $("#find-lyrics").show();

@@ -2,7 +2,7 @@
   text-align: center;
   background-color: #A569BD;
   margin: 20px;
-  transform: rotate(2deg);
+  /*transform: rotate(2deg);*/
 }
 
 .well{
@@ -52,17 +52,10 @@
   padding: 40px;
 }
 
-#chillgif {
+#karaoke-gif {
   display: none;
 }
 
-#partygif {
-  display: none;
-}
-
-#litgif {
-  display: none;
-}
 
 body {
   background-color: #757575;
