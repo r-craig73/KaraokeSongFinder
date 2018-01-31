@@ -4,7 +4,6 @@ function Song(name, artist, score, album) {
   this.artist = artist;
   this.score = score;
   this.album = album;
-
 }
 
 var chill = [
@@ -27,6 +26,7 @@ var chill = [
 ];
 
 var party = [
+  "DrakeL Hotline Bling",
   "Jason Mraz: I'm Yours",
   "Frank Sinatra: My Way",
   "Fleetwood Mac: Go Your Own Way",
@@ -239,8 +239,25 @@ $(document).ready(function() {
 //   console.log(data.data[0].images.original.url);
 //
 // }
+
   $("button#try-again").click(function() {
     location.reload();
   });
+
+  $("#lyric-add").submit(function(event) {
+    event.preventDefault();
+    var playlists = [];
+    var addArtist = $("input#add-artist").val();
+    var addSong = $("input#add-song").val();
+    var newSongFormat = addArtist.concat(": " + addSong);
+    newSongFormat.toString();
+    console.log(newSongFormat);
+    console.log("Your request has been submitted!");
+    playlists.push(newSongFormat);
+    $("span#ns-input-span").text(playlists);
+    console.log(playlists);
+
+});
+
 
 });
