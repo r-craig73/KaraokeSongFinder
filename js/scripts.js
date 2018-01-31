@@ -1,10 +1,9 @@
 // biz logic
-function Song(name, artist, score, album) {
-  this.songName = name;
-  this.artist = artist;
+function Song(mood, vibe, drunk, score) {
+  this.mood = mood;
+  this.vibe = vibe;
+  this.drunk = drunk;
   this.score = score;
-  this.album = album;
-
 }
 
 var chill = [
@@ -24,11 +23,11 @@ var chill = [
   "Oasis: Wonderwall",
   "R.E.M.: Losing My Religion",
   "Sinead O'Connor: Nothing Compares 2 U",
+  "Frank Sinatra: My Way",
 ];
 
 var party = [
   "Jason Mraz: I'm Yours",
-  "Frank Sinatra: My Way",
   "Fleetwood Mac: Go Your Own Way",
   "Alanis Morissette: You Oughta Know",
   "No Doubt: Just a Girl",
@@ -117,7 +116,7 @@ var chillRandom = chill[Math.floor(Math.random()*chill.length)];
 var partyRandom = party[Math.floor(Math.random()*party.length)];
 var litRandom = lit[Math.floor(Math.random()*lit.length)];
 
-Song.prototype.songRecommendation = function(score) {
+Song.prototype.songRecommendation = function() {
   if (this.score < 5) {
     return (chillRandom);
   } else if (this.score >= 5 && this.score < 10) {
@@ -161,7 +160,6 @@ $(document).ready(function() {
     var drunkSelection = parseInt($("select#intox").val());
 
     var newScore = (moodSelection + vibeSelection + drunkSelection);
-    console.log(newScore);
     var newSong = new Song(moodSelection, vibeSelection, drunkSelection, newScore);
 
     var result = newSong.songRecommendation(newScore);
@@ -199,15 +197,16 @@ $(document).ready(function() {
     $("#gif").show();
 
     //gif api
-
-    // $.ajax({
-    //   url: "http://api.giphy.com/v1/gifs/search?&q=karaoke&api_key=dc6zaTOxFJmzC",
-    //   type: "GET",
-    // }).done(function(response) {
-    //   //success: function(response) {
-    //     console.log(response.data[0].bitly_gif_url);
-    //      $("#gif").append().html("<img src='response.data[0].bitly_gif_url'>");
-    //   });
+    
+    $.ajax({
+      url: "http://api.giphy.com/v1/gifs/search?&q=karaoke&api_key=dc6zaTOxFJmzC",
+      type: "GET",
+    }).done(function(response) {
+      //success: function(response) {
+      var gifLink = (response.data[0].bitly_gif_url);
+        console.log(response.data[0].bitly_gif_url);
+         $("#gif").html('<center><img src = "'+gifLink+'"></center>');
+      });
 
     $("#find-lyrics").fadeOut();
     $("#try-again").fadeOut();
