@@ -266,4 +266,21 @@ $(document).ready(function() {
   $("button#try-again-three").click(function() {
     location.reload();
   });
+
+  $("#lyric-add").submit(function(event) {
+    event.preventDefault();
+    var playlists = [];
+    var addArtist = $("input#add-artist").val();
+    var addSong = $("input#add-song").val();
+    var newSongFormat = addArtist.concat(": " + addSong);
+    newSongFormat.toString();
+    console.log(newSongFormat);
+    console.log("Your request has been submitted!");
+    playlists.push(newSongFormat);
+    $("span#ns-input-span").text(playlists);
+    console.log(playlists);
+  });
+
+
+
 });
