@@ -1,13 +1,53 @@
-.jumbotron {
-  text-align: center;
-  background-color: #A569BD;
-  margin: 20px;
-  /*transform: rotate(2deg);*/
+body {
+  /* background: linear-gradient(to top, #E1D0AA, white); */
+  background-image: url("https://www.musictrends.com/wp-content/uploads/2017/08/dj-202-3-1200.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-.well{
+.jumbotron {
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  text-align: center;
+  background-image:url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3676349.jpg);
+  color: #F4AD48;
+  padding: 2.2em;
+  text-shadow: black 1px 2px 1px;
+  opacity: .9;
+  letter-spacing: 2.2px;
+	line-height: 55px;
+
+}
+
+h3 {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+	font-size: 20px;
+	line-height: 25px;
+  text-align: center;
+  color: #5F2A30;
+}
+
+.btn {
+    background-color: #F45A1F;
+    color: #5F2A30;
+    font-size: 15px;
+    padding: 22px 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: 'Vollkorn', Georgia, Times, serif;
+    text-align: center;
+}
+
+.questions {
+  font-family: 'Vollkorn', Georgia, Times, serif;
   text-align: center;
 }
+
+
+
+
+
+
 
 #show {
   width: 100%;
@@ -48,18 +88,20 @@
 
 
 .result {
-  color: white;
+  color: black;
   padding: 40px;
+  font-family: 'Vollkorn', Georgia, Times, serif;
 }
+
+
+
+
+
 
 #karaoke-gif {
   display: none;
 }
 
-
-body {
-  background-color: #757575;
-}
 
 .form-questions {
   display: none;

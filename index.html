@@ -3,6 +3,8 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
@@ -10,74 +12,83 @@
   </head>
   <body>
     <div class="container">
-      <!-- intro - first screen -->
+      <div class="image">
+        <img src="http://res.freestockphotos.biz/pictures/8/8616-illustration-of-music-notes-pv.png" alt=""><br><br>
+      </div>
       <div class="jumbotron" id="container-one">
-          <h1>Welcome to Karaoke Song Finder!</h1>
+        <h1>Karaoke Selector</h1>
       </div>
+      <br>
       <div>
-        <h3>Don't know which karaoke song to sing tonight? We can help! Choose your adventure below. Click "Questions" to answer questions that give you a song. Click "Random Song" if you want to get a random song idea!</h3>
+        <h3>Don't Know What Song to Sing?</h3>
+        <h3>We can Help!</h3>
+        <h3>Click on the questions button to get started.</h3>
+        <h3>Or take your chances and click random.</h3>
       </div>
-
+      <br>
       <div class="container" id="button-container">
         <div class="row">
-          <div class="col-md-6">
-          <button class="btn btn-info" id="show-form">Questions</button>
-            </div>
-          <div class="col-md-6">
-            <button class="btn btn-info" id="random">Show me a random song!</button>
+          <div class="col-md-4">
+            <br><button class="btn btn-warning" id="show-form">Answers some Questions:</button>
+          </div>
+          <div class="col-md-4">
+            <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/3d-transparent-glass-icons-alphanumeric/068122-3d-transparent-glass-icon-alphanumeric-question-mark1-ps.png" alt="question mark" id="question-img">
+          </div>
+          <div class="col-md-4">
+            <br><button class="btn btn-warning" id="random">Just Show Me A Random Song:</button>
           </div>
         </div>
+        <br>
       </div>
-
-      <!-- if show-form button is clicked -->
-      <div class="form-questions">
+      <div class="form-questions"> <!-- if show-form button is clicked -->
         <div class="row">
           <div class="col-sm-12">
-            <div class="well">
-              <h5>What is your mood right now?</h5>
+            <div class="questions">
+              <h5>Feeling a little Moody?</h5>
               <select class="form-control" id="mood">
+                <option value="blank"></option>
                 <option value="1">A little down</option>
                 <option value="2">Chill</option>
-                <option value="3">Waking up...</option>
+                <option value="3">Waking up..</option>
                 <option value="4">Ready for a good time</option>
                 <option value="5">Party!</option>
-              </select>
+              </select><br>
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-sm-12">
-            <div class="well">
-              <h5>How is the vibe?</h5>
+            <div class="questions">
+              <h5>How's the Vibe Where You Are?</h5>
               <select class="form-control" id="vibe">
-                <option value="1">Solo, chill bedroom star</option>
+                <option value="blank"></option>
+                <option value="1">Solo, bedroom star</option>
                 <option value="2">Small group of friends</option>
-                <option value="3">Heating up</option>
-                <option value="4">House party</option>
+                <option value="3">House Party</option>
+                <option value="4">Heating Up</option>
                 <option value="5">Burning down the house</option>
               </select>
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-sm-12">
-            <div class="well">
+            <div class="questions">
               <br>
-              <h5>Rate your intoxication</h5>
+              <h5>Is Alcohol Involved?</h5>
               <select class="form-control" id="intox">
+                <option value="blank"></option>
                 <option value="1">Sober</option>
                 <option value="2">A little tipsy</option>
                 <option value="3">A few drinks in</option>
                 <option value="4">Definitely feeling it</option>
                 <option value="5">Please take my keys away</option>
-              </select>
+              </select><br><br>
             </div>
           </div>
         </div>
 
-        <button class="btn btn-info" id="show-song">Show me my song!</button>
+        <button class="btn btn-warning" id="show-song">Show me my song!</button>
       </div>
 
       <!-- after show my song button is clicked -->
@@ -87,10 +98,10 @@
         <p id="karaoke-gif"><iframe src="https://giphy.com/embed/3o7qDRmFdvJ3Rk1wYw" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></p>
         <div class="row">
           <div class="col-md-6">
-            <button class="btn btn-info" id="try-again">Try again!</button>
+            <button class="btn btn-warning" id="try-again">Try again!</button>
           </div>
           <div class="col-md-6">
-            <button class="btn btn-info" id="find-lyrics">Find the lyrics!</button>
+            <button class="btn btn-warning" id="find-lyrics">Find the lyrics!</button>
           </div>
         </div>
       </div>
@@ -109,11 +120,14 @@
             <input id="artist" class="form-control" type="text">
           </div>
 
-          <button id="lyrics" type="submit" class="btn btn-info">Show me the lyrics!</button>
+          <button id="lyrics" type="submit" class="btn btn-warning">Show me the lyrics!</button>
         </form>
       </div>
       <!-- shows lyrics when info is entered -->
       <div class="result">
+      </div>
+      <div class="gif">
+        <span id= "giphy"></span>
       </div>
     </div>
   </body>

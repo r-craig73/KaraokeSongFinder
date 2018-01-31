@@ -7,7 +7,6 @@ function Song(name, artist, score, album) {
 
 }
 
-
 var chill = [
   "Drake: Hotline Bling",
   "Dolly Parton: 9 to 5",
@@ -199,7 +198,7 @@ $(document).ready(function() {
     var artistSearch = $("input#artist").val();
     console.log(artistSearch);
 
-    var ajaxCall = function(apiData) {
+    var ajaxCall = function(apiData) { //musixmatch api
     var apikey = 'ac2764373bf0a3d6a7fd0aa221e48c34';
     var result = $.ajax({
       type: "GET",
@@ -225,7 +224,21 @@ $(document).ready(function() {
 
     $('.result').text(ajaxCall())
   });
-
+//
+// var api = "http://api.giphy.com/v1/gifs/search?";
+// var apikey = "&api_key=dc6zaTOxFJmzC"
+// var search = "&q=karaoke"
+//
+// function setup() {
+//   noCanvas();
+//   var url = api + apiKey + search;
+//   loadJSON(url, gotData);
+// }
+//
+// function gotData(data) {
+//   console.log(data.data[0].images.original.url);
+//
+// }
   $("button#try-again").click(function() {
     location.reload();
   });
