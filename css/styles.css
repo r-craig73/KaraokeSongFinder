@@ -57,11 +57,11 @@ h4 {
   margin: 20px 75px 20px 20px;
   text-align: center;
 
-<<<<<<< HEAD
-input:valid {
+
+/*input:valid {
   border: 2px solid black;
-=======
-}
+
+}*/
 
 
 
@@ -69,7 +69,6 @@ input:valid {
 
 #show {
   width: 100%;
->>>>>>> 377da4cd37562b7cfc3a541ae3d4799b5664b1cd
 }
 
 
