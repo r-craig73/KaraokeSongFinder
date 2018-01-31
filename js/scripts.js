@@ -27,6 +27,7 @@ var chill = [
 ];
 
 var party = [
+  "DrakeL Hotline Bling",
   "Jason Mraz: I'm Yours",
   "Fleetwood Mac: Go Your Own Way",
   "Alanis Morissette: You Oughta Know",
@@ -244,7 +245,7 @@ $(document).ready(function() {
       contentType: 'application/json',
       success: function(data) {
           console.log(data);
-      },    
+      },
     }).then(function(res) {
       $('.result').text(res.message.body.lyrics.lyrics_body);
       $("#try-again-two").show();

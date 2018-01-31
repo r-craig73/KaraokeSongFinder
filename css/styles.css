@@ -49,9 +49,27 @@ h1 {
   text-align: center;
 }
 
+h4 {
+  background-color: lightgrey;
+  width: 800px;
+  border: 10px solid green;
+  padding: 25px;
+  margin: 20px 75px 20px 20px;
+  text-align: center;
 
+<<<<<<< HEAD
 input:valid {
   border: 2px solid black;
+=======
+}
+
+
+
+
+
+#show {
+  width: 100%;
+>>>>>>> 377da4cd37562b7cfc3a541ae3d4799b5664b1cd
 }
 
 
