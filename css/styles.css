@@ -1,6 +1,6 @@
 body {
   /* background: linear-gradient(to top, #E1D0AA, white); */
-  background-image: url("https://www.skpaudio.com/image/cache/catalog/slider/consola_2d-670x400.png");
+  background-image: url("");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -81,8 +81,7 @@ h3 {
   display: hide;
 }*/
 
- #try-again {
-   width: 100%;
+ #try-again, #try-again-two, #lyric-search, #find-lyrics, #inspire-me, #gif {
    display: none;
  }
 
@@ -94,10 +93,6 @@ h3 {
 }
 
 
-
-
-
-
 #karaoke-gif {
   display: none;
 }
@@ -107,11 +102,6 @@ h3 {
   display: none;
 }
 
-#lyric-search {
-  display: none;
-}
-
-#find-lyrics {
-
+ {
   display: none;
 }

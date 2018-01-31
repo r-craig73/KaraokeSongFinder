@@ -145,10 +145,14 @@ Song.prototype.textResponse = function(chillRandom, partyRandom, litRandom) {
 //ui logic
 $(document).ready(function() {
 
+//when answer questions button is clicked
   $("button#show-form").click(function() {
-    $(".form-questions").show();
+    $(".form-questions").fadeIn();
+    $("#show-form").fadeOut();
+    $("#random").fadeOut();
   });
 
+  //when show me my song button is clicked
   $("button#show-song").click(function() {
     $("#song-results").show();
     $("#karaoke-gif").show();
@@ -165,38 +169,64 @@ $(document).ready(function() {
     $("#song-results").text(result);
     $("#text-result").text(newSong.textResponse(chillRandom, partyRandom, litRandom));
 
-    $("#try-again").show();
-    $("#find-lyrics").show();
+    $("#try-again").fadeIn();
+    $("#find-lyrics").fadeIn();
+    $("#inspire-me").fadeIn();
+    $(".form-questions").fadeOut();
+    $("#show-form").fadeOut();
+    $("#random").fadeOut();
 
     var reset = function() {
       $("select#mood").val("");
       $("select#vibe").val("");
       $("select#intox").val("");
     }
-
-    // reset();
-    // $("#lyrics-well").show();
-    // $("span#lyrics").show();
   });
 
+//when random song button is clicked
   $("button#random").click(function() {
     var allSongsRandom = allSongs[Math.floor(Math.random()*allSongs.length)]
     $("#song-results").text(allSongsRandom);
+    $("#show-form").fadeOut();
+    $("#random").fadeOut();
     $("#try-again").show();
     $("#find-lyrics").show();
+    $("#inspire-me").show();
   });
 
+//when inspire me button is clicked
+  $("button#inspire-me").click(function() {
+    $("#gif").show();
+
+    //gif api
+
+    // $.ajax({
+    //   url: "http://api.giphy.com/v1/gifs/search?&q=karaoke&api_key=dc6zaTOxFJmzC",
+    //   type: "GET",
+    // }).done(function(response) {
+    //   //success: function(response) {
+    //     console.log(response.data[0].bitly_gif_url);
+    //      $("#gif").append().html("<img src='response.data[0].bitly_gif_url'>");
+    //   });
+
+    $("#find-lyrics").fadeOut();
+    $("#try-again").fadeOut();
+  });
+
+//when find my lyrics button is clicked
   $("button#find-lyrics").click(function() {
-    $("#lyric-search").show();
+    $("#lyric-search").fadeIn();
+    $("#try-again").fadeOut();
+    $("#inspire-me").fadeOut();
   });
 
+//when lyrics form is submitted
   $("#lyric-search").submit(function(event) {
     event.preventDefault();
 
     var songSearch = $("input#song").val();
-    console.log(songSearch);
     var artistSearch = $("input#artist").val();
-    console.log(artistSearch);
+
 
     var ajaxCall = function(apiData) { //musixmatch api
     var apikey = 'ac2764373bf0a3d6a7fd0aa221e48c34';
@@ -219,12 +249,25 @@ $(document).ready(function() {
       }
     }).then(function(res) {
       $('.result').text(res.message.body.lyrics.lyrics_body);
+      $("#try-again-two").show();
     });
   };
 
-    $('.result').text(ajaxCall())
+    $('.result').text(ajaxCall());
   });
-//
+
+//when try again buttons are submitted
+  $("button#try-again").click(function() {
+    location.reload();
+  });
+
+  $("button#try-again-two").click(function() {
+    location.reload();
+  });
+
+});
+
+
 // var api = "http://api.giphy.com/v1/gifs/search?";
 // var apikey = "&api_key=dc6zaTOxFJmzC"
 // var search = "&q=karaoke"
@@ -239,8 +282,3 @@ $(document).ready(function() {
 //   console.log(data.data[0].images.original.url);
 //
 // }
-  $("button#try-again").click(function() {
-    location.reload();
-  });
-
-});
