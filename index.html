@@ -12,46 +12,42 @@
   </head>
   <body>
     <div class="container">
-      <div class="image">
+      <!-- <div class="image">
         <img src="http://res.freestockphotos.biz/pictures/8/8616-illustration-of-music-notes-pv.png" alt=""><br><br>
-      </div>
+      </div> -->
       <div class="jumbotron" id="container-one">
         <h1>Karaoke Selector</h1>
       </div>
       <br>
-      <div>
-        <h3>Don't Know What Song to Sing?</h3>
-        <h3>We can Help!</h3>
-        <h3>Click on the questions button to get started.</h3>
-        <h3>Or take your chances and click random.</h3>
+      <div id="intro">
+        <h2>Going to karaoke and don't know what to sing? We can help!</h2>
+        <h3>Click on Questions to get started, or take your chances and click Random.</h4>
       </div>
       <br>
       <div class="container" id="button-container">
         <div class="row">
           <div class="col-md-6">
-            <br><button class="btn btn-warning" id="show-form">Answers some Questions:</button>
+            <button class="btn btn-warning" id="show-form">Answer Some Questions</button>
           </div>
-          <!-- <div class="col-md-4">
-            <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/3d-transparent-glass-icons-alphanumeric/068122-3d-transparent-glass-icon-alphanumeric-question-mark1-ps.png" alt="question mark" id="question-img">
-          </div> -->
           <div class="col-md-6">
-            <br><button class="btn btn-warning" id="random">Just Show Me A Random Song:</button>
+            <button class="btn btn-warning" id="random">Just Show Me A Random Song!</button>
           </div>
         </div>
-        <br>
       </div>
-      <div class="form-questions"> <!-- if show-form button is clicked -->
+
+      <!-- if show-form button is clicked -->
+      <div class="form-questions">
         <div class="row">
           <div class="col-sm-12">
             <div class="questions">
-              <h5>Feeling a little Moody?</h5>
+              <h5>How are you feeling?</h5>
               <select class="form-control" id="mood">
                 <option value="blank"></option>
-                <option value="1">A little down</option>
-                <option value="2">Chill</option>
-                <option value="3">Waking up..</option>
-                <option value="4">Ready for a good time</option>
-                <option value="5">Party!</option>
+                <option value="1">Not fully awake yet</option>
+                <option value="2">Feeling chill</option>
+                <option value="3">Ready for a good time</option>
+                <option value="4">Let's party!</option>
+                <option value="5">Shots for everyone!</option>
               </select><br>
             </div>
           </div>
@@ -59,14 +55,14 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="questions">
-              <h5>How's the Vibe Where You Are?</h5>
+              <h5>What's the vibe of your night?</h5>
               <select class="form-control" id="vibe">
                 <option value="blank"></option>
-                <option value="1">Solo, bedroom star</option>
-                <option value="2">Small group of friends</option>
-                <option value="3">House Party</option>
-                <option value="4">Heating Up</option>
-                <option value="5">Burning down the house</option>
+                <option value="1">Just me, hanging solo...</option>
+                <option value="2">Hanging with a group of friends</option>
+                <option value="3">Heading to a house party</option>
+                <option value="4">Things are heating up</option>
+                <option value="5">Ready to burn down the house</option>
               </select>
             </div>
           </div>
@@ -75,10 +71,10 @@
           <div class="col-sm-12">
             <div class="questions">
               <br>
-              <h5>Is Alcohol Involved?</h5>
+              <h5>What's your intoxication status?</h5>
               <select class="form-control" id="intox">
                 <option value="blank"></option>
-                <option value="1">Sober</option>
+                <option value="1">Sober AF</option>
                 <option value="2">A little tipsy</option>
                 <option value="3">A few drinks in</option>
                 <option value="4">Definitely feeling it</option>
@@ -88,29 +84,36 @@
           </div>
         </div>
 
-        <button class="btn btn-warning" id="show-song">Show me my song!</button>
+        <button class="btn btn-warning" id="show-song">Show me what song I should sing!</button>
       </div>
 
       <!-- after show my song button is clicked -->
-      <div>
+      <div id="results-2">
         <h3 id="text-result"></h3>
         <h1 id="song-results"></h1>
+      </div>
+
+      <div id="buttons">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <button class="btn btn-warning" id="try-again">Try again!</button>
           </div>
-          <div class="col-md-6">
-            <button class="btn btn-warning" id="find-lyrics">Find the lyrics!</button>
-          </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <button class="btn btn-warning" id="inspire-me">Inspire me!</button>
           </div>
-        </div>
-        <div>
-        <p id="keep-inspiring">Keep clicking Inspire Me for more inspiration. </p>
-        <p id="gif"></p>
+          <div class="col-md-4">
+            <button class="btn btn-warning" id="find-lyrics">Find the lyrics!</button>
+          </div>
+
         </div>
       </div>
+
+      <div>
+        <p id="keep-inspiring">Keep clicking for more inspiration!</p>
+        <p id="gif"></p>
+      </div>
+
+
 
       <!-- if try again button is clicked - goes back to original screen-->
 
@@ -130,14 +133,10 @@
         </form>
       </div>
       <!-- shows lyrics when info is entered -->
-      <div class="result">
-      </div>
+      <div class="result"></div>
 
-      <div class="button">
-        <button class="btn btn-warning" id="try-again-two">Play again!</button>
-      </div>
-
-      <div class="button">
+      <div class="button-doover">
+        <button class="btn btn-warning" id="try-again-two">Start over</button>
         <button class="btn btn-warning" id="try-again-three">Do it again!</button>
       </div>
 

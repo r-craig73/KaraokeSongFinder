@@ -27,7 +27,6 @@ var chill = [
 ];
 
 var party = [
-  "DrakeL Hotline Bling",
   "Jason Mraz: I'm Yours",
   "Fleetwood Mac: Go Your Own Way",
   "Alanis Morissette: You Oughta Know",
@@ -131,12 +130,12 @@ Song.prototype.songRecommendation = function() {
 
 Song.prototype.textResponse = function(chillRandom, partyRandom, litRandom) {
   if (this.songRecommendation() === chillRandom) {
-    return ("This is a chill song");
+    return ("Looks like you're taking it easy tonight. How does this song sound?");
     console.log(this.songRecommendation());
   } else if (this.songRecommendation() === partyRandom) {
-    return ("This is a party song.");
+    return ("Trying to party? Try this song.");
   } else if (this.songRecommendation() === litRandom) {
-    return ("This is a lit song");
+    return ("You are ready to get wild. Sing this.");
   } else {
     return("this is not working");
   }
@@ -148,8 +147,8 @@ $(document).ready(function() {
 //when answer questions button is clicked
   $("button#show-form").click(function() {
     $(".form-questions").fadeIn();
-    $("#show-form").fadeOut();
-    $("#random").fadeOut();
+    $("#show-form").hide();
+    $("#random").hide();
   });
 
   //when show me my song button is clicked
@@ -171,9 +170,10 @@ $(document).ready(function() {
     $("#try-again").fadeIn();
     $("#find-lyrics").fadeIn();
     $("#inspire-me").fadeIn();
-    $(".form-questions").fadeOut();
-    $("#show-form").fadeOut();
-    $("#random").fadeOut();
+    $(".form-questions").hide();
+    $("#show-form").hide();
+    $("#random").hide();
+    $("#intro").hide();
 
     var reset = function() {
       $("select#mood").val("");
@@ -186,11 +186,12 @@ $(document).ready(function() {
   $("button#random").click(function() {
     var allSongsRandom = allSongs[Math.floor(Math.random()*allSongs.length)]
     $("#song-results").text(allSongsRandom);
-    $("#show-form").fadeOut();
-    $("#random").fadeOut();
+    $("#show-form").hide();
+    $("#random").hide();
     $("#try-again").show();
     $("#find-lyrics").show();
     $("#inspire-me").show();
+    $("#intro").hide();
   });
 
 //when inspire me button is clicked
