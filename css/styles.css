@@ -1,6 +1,5 @@
 body {
-  /* background: linear-gradient(to top, #E1D0AA, white); */
-  background-image: url("");
+  background: linear-gradient(to top, #E1D0AA, white);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -16,7 +15,6 @@ body {
   opacity: .9;
   letter-spacing: 2.2px;
 	line-height: 55px;
-
 }
 
 h3 {
@@ -25,6 +23,14 @@ h3 {
 	line-height: 25px;
   text-align: center;
   color: #5F2A30;
+}
+
+h1 {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  text-align: center;
+  color: #5F2A30;
+  font-size: 90px;
+  padding: 15px;
 }
 
 .btn {
@@ -44,20 +50,12 @@ h3 {
 }
 
 
-
-
-
-
-
-#show {
-  width: 100%;
+input:valid {
+  border: 2px solid black;
 }
 
-#random {
-  width: 100%;
-}
 
- #container-two {
+ /*#container-two {
    opacity: .8;
    background-color: blue;
    padding-top: 20px;
@@ -71,7 +69,7 @@ h3 {
  }
 
  #container-four {
-   /*display: hide;*/
+   *display: hide;
    background-color: gray;
    padding-top: 20px;
    padding-bottom: 20px;
@@ -81,10 +79,9 @@ h3 {
   display: hide;
 }*/
 
- #try-again, #try-again-two, #lyric-search, #find-lyrics, #inspire-me, #gif {
+ #try-again, #try-again-two, #try-again-three, #lyric-search, #find-lyrics, #inspire-me, #keep-inspiring {
    display: none;
  }
-
 
 .result {
   color: black;
@@ -92,16 +89,6 @@ h3 {
   font-family: 'Vollkorn', Georgia, Times, serif;
 }
 
-
-#karaoke-gif {
-  display: none;
-}
-
-
 .form-questions {
-  display: none;
-}
-
- {
   display: none;
 }

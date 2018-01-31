@@ -194,22 +194,20 @@ $(document).ready(function() {
 
 //when inspire me button is clicked
   $("button#inspire-me").click(function() {
-    $("#gif").show();
-
+    $("#keep-inspiring").show();
     //gif api
-    
     $.ajax({
       url: "http://api.giphy.com/v1/gifs/search?&q=karaoke&api_key=dc6zaTOxFJmzC",
       type: "GET",
     }).done(function(response) {
-      //success: function(response) {
-      var gifLink = (response.data[0].bitly_gif_url);
-        console.log(response.data[0].bitly_gif_url);
-         $("#gif").html('<center><img src = "'+gifLink+'"></center>');
+      var ranNum = (Math.floor(Math.random() * 25) + 1);
+      var gifLink = (response.data[ranNum].images.original.url);
+        $("#gif").html('<center><img src="'+gifLink+'"></center>');
       });
 
     $("#find-lyrics").fadeOut();
     $("#try-again").fadeOut();
+    $("#try-again-three").fadeIn();
   });
 
 //when find my lyrics button is clicked
@@ -217,6 +215,7 @@ $(document).ready(function() {
     $("#lyric-search").fadeIn();
     $("#try-again").fadeOut();
     $("#inspire-me").fadeOut();
+    $("#find-lyrics").fadeOut();
   });
 
 //when lyrics form is submitted
@@ -245,13 +244,12 @@ $(document).ready(function() {
       contentType: 'application/json',
       success: function(data) {
           console.log(data);
-      }
+      },    
     }).then(function(res) {
       $('.result').text(res.message.body.lyrics.lyrics_body);
       $("#try-again-two").show();
     });
   };
-
     $('.result').text(ajaxCall());
   });
 
@@ -264,20 +262,7 @@ $(document).ready(function() {
     location.reload();
   });
 
+  $("button#try-again-three").click(function() {
+    location.reload();
+  });
 });
-
-
-// var api = "http://api.giphy.com/v1/gifs/search?";
-// var apikey = "&api_key=dc6zaTOxFJmzC"
-// var search = "&q=karaoke"
-//
-// function setup() {
-//   noCanvas();
-//   var url = api + apiKey + search;
-//   loadJSON(url, gotData);
-// }
-//
-// function gotData(data) {
-//   console.log(data.data[0].images.original.url);
-//
-// }

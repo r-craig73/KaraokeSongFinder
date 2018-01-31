@@ -28,13 +28,13 @@
       <br>
       <div class="container" id="button-container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <br><button class="btn btn-warning" id="show-form">Answers some Questions:</button>
           </div>
-          <div class="col-md-4">
+          <!-- <div class="col-md-4">
             <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/3d-transparent-glass-icons-alphanumeric/068122-3d-transparent-glass-icon-alphanumeric-question-mark1-ps.png" alt="question mark" id="question-img">
-          </div>
-          <div class="col-md-4">
+          </div> -->
+          <div class="col-md-6">
             <br><button class="btn btn-warning" id="random">Just Show Me A Random Song:</button>
           </div>
         </div>
@@ -94,8 +94,7 @@
       <!-- after show my song button is clicked -->
       <div>
         <h3 id="text-result"></h3>
-        <h3 id="song-results"></h3>
-        <!-- <p id="karaoke-gif"><iframe src="https://giphy.com/embed/3o7qDRmFdvJ3Rk1wYw" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></p> -->
+        <h1 id="song-results"></h1>
         <div class="row">
           <div class="col-md-6">
             <button class="btn btn-warning" id="try-again">Try again!</button>
@@ -107,7 +106,10 @@
             <button class="btn btn-warning" id="inspire-me">Inspire me!</button>
           </div>
         </div>
-        <p id="gif" ></p>
+        <div>
+        <p id="keep-inspiring">Keep clicking Inspire Me for more inspiration. </p>
+        <p id="gif"></p>
+        </div>
       </div>
 
       <!-- if try again button is clicked - goes back to original screen-->
@@ -117,11 +119,11 @@
         <form id="lyric-search">
           <div class="form-group">
             <label for="song">Enter a song:</label>
-            <input id="song" class="form-control" type="text">
+            <input id="song" name="artist" required>
           </div>
           <div class="form-group">
             <label for="artist">Enter the artist:</label>
-            <input id="artist" class="form-control" type="text">
+            <input id="artist" name="artist" required>
           </div>
 
           <button id="lyrics" type="submit" class="btn btn-warning">Show me the lyrics!</button>
@@ -132,8 +134,13 @@
       </div>
 
       <div class="button">
-        <button class="btn btn-warning" id="try-again-two">Try again!</button>
+        <button class="btn btn-warning" id="try-again-two">Play again!</button>
       </div>
+
+      <div class="button">
+        <button class="btn btn-warning" id="try-again-three">Do it again!</button>
+      </div>
+
     </div>
   </body>
 </html>
