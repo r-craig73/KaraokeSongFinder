@@ -27,7 +27,6 @@ var party = [
   "Dolly Parton: 9 to 5",
   "Carrie Underwood: Before He Cheats",
   "Fleetwood Mac: Go Your Own Way",
-  "Journey: Don&#39t Stop Believin&#39",
   "Aretha Franklin: Respect",
   "The B-52S: Love Shack",
   "Queen: Bohemian Rhapsody",
@@ -103,7 +102,6 @@ var allSongs = [
   "Bonnie Tyler: Total Eclipse Of The Heart",
   "Eurythmics: Sweet Dreams (Are Made Of This)",
   "Neil Diamond: Sweet Caroline",
-  "Journey: Don&#39t Stop Believin&#39",
   "Queen: Bohemian Rhapsody",
   "Oasis: Wonderwall",
   "R.E.M.: Losing My Religion",
@@ -207,6 +205,7 @@ $(document).ready(function() {
     $("#find-lyrics").fadeOut();
     $("#try-again").fadeOut();
     $("#try-again-three").fadeIn();
+    $("#lyric-add-button").fadeOut();
   });
 
 //when second inspire me button is clicked
@@ -228,6 +227,7 @@ $(document).ready(function() {
     $("#try-again").fadeOut();
     $("#inspire-me").fadeOut();
     $("#find-lyrics").fadeOut();
+    $("#lyric-add-button").fadeOut();
   });
 
 //when lyrics form is submitted
@@ -285,7 +285,7 @@ $(document).ready(function() {
     location.reload();
   });
 
-  $(".jumbotron").click(function() {
+  $(".my-container").click(function() {
     location.reload();
   });
 
@@ -296,6 +296,7 @@ $(document).ready(function() {
 // when 'Make a playlist' button is clicked
   $("button#lyric-add-button").click(function(){
     $("#new-song-section").fadeIn();
+    $("#buttons").hide();
   });
 
   $("form#lyric-add").submit(function(event) {
@@ -304,7 +305,6 @@ $(document).ready(function() {
     var addArtist = $("input#add-artist").val();
     var addSong = $("input#add-song").val();
     var newSongFormat = addArtist.concat(": " + addSong + "<br>");
-    newSongFormat.toString();
     $("span#ns-input-span").append(playlists);
     console.log(playlists);
   });
@@ -312,7 +312,5 @@ $(document).ready(function() {
 // save playlist button
     $("button#save-playlist-button").click(function(){
       $("#new-song-section").fadeOut();
-      var playlists = [];
-      // $("span#ns-input-span").clearQueue();
     });
 });
