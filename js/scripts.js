@@ -7,37 +7,37 @@ function Song(mood, vibe, drunk, score) {
 }
 
 var chill = [
+  "Jason Mraz: I'm Yours",
   "Drake: Hotline Bling",
-  "Dolly Parton: 9 to 5",
-  "Carrie Underwood: Before He Cheats",
   "Fleetwood Mac: Landslide",
   "Celine Dion: My Heart Will Go On",
-  "Aretha Franklin: Respect",
-  "The B-52S: Love Shack",
   "Backstreet Boys: I Want It That Way",
   "Bonnie Tyler: Total Eclipse Of The Heart",
   "Eurythmics: Sweet Dreams (Are Made Of This)",
   "Neil Diamond: Sweet Caroline",
-  "Journey: Don’t Stop Believin’",
-  "Queen: Bohemian Rhapsody",
   "Oasis: Wonderwall",
+  "TLC: No Scrubs",
+  "Nelly Furtado: I'm Like A Bird",
   "R.E.M.: Losing My Religion",
   "Sinead O'Connor: Nothing Compares 2 U",
   "Frank Sinatra: My Way",
 ];
 
 var party = [
-  "Jason Mraz: I'm Yours",
+  "Dolly Parton: 9 to 5",
+  "Carrie Underwood: Before He Cheats",
   "Fleetwood Mac: Go Your Own Way",
+  "Journey: Don’t Stop Believin’",
+  "Aretha Franklin: Respect",
+  "The B-52S: Love Shack",
+  "Queen: Bohemian Rhapsody",
   "Alanis Morissette: You Oughta Know",
   "No Doubt: Just a Girl",
   "'N Sync: Bye, Bye, Bye",
-  "Nelly Furtado: I'm Like A Bird",
   "Madonna: Like A Prayer",
   "Destiny's Child: Say My Name",
   "Justin Timberlake: Can't Stop The Feeling!",
   "Britney Spears: Baby One More Time",
-  "TLC: No Scrubs",
   "Spice Girls: Wannabe",
   "Village People: YMCA",
   "Sublime: Santeria",
@@ -48,8 +48,6 @@ var lit = [
   "The Commodores: Brickhouse",
   "Young MC: Bust A Move",
   "Miley Cyrus: Party in the USA",
-  "TLC: No Scrubs",
-  "Def Leppard: Pour Some Sugar On Me",
   "Ginuwine: Pony",
   "Christina Aguilera: Genie In A Bottle",
   "Calvin Harris feat. Rihanna: This Is What You Came For",
@@ -271,4 +269,19 @@ $(document).ready(function() {
   $("button#try-again-three").click(function() {
     location.reload();
   });
+
+  $("#lyric-add").submit(function(event) {
+    event.preventDefault();
+    var playlists = [];
+    var addArtist = $("input#add-artist").val();
+    var addSong = $("input#add-song").val();
+    var newSongFormat = addArtist.concat(": " + addSong + "<br>");
+    newSongFormat.toString();
+    console.log(newSongFormat);
+    console.log("Your request has been submitted!");
+    playlists.push(newSongFormat);
+    $("span#ns-input-span").append(playlists);
+    console.log(playlists);
+  });
+
 });
