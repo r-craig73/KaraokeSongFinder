@@ -3,7 +3,7 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans' rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
     <script src="js/jquery-3.3.1.js"></script>
@@ -13,8 +13,8 @@
   <body>
 
     <div class="container">
-      <div class="jumbotron">
-        <h1>Karaoke Selector</h1>
+      <div class="my-container">
+        <h1>Karaoke Song Selector</h1>
       </div>
       <br>
       <div id="intro">
@@ -99,7 +99,6 @@
           <div class="col-md-3 text-center">
             <button class="btn btn-warning" id="try-again">Try again!</button>
           </div>
-            <div id="gif"></div>
           <div class="col-md-3 text-center">
             <button class="btn btn-warning" id="inspire-me">Inspire me!</button>
           </div>
@@ -111,6 +110,8 @@
           </div>
         </div>
       </div>
+
+      <div id="gif"></div>
 
       <!-- if try again button is clicked - goes back to original screen-->
 
@@ -127,11 +128,13 @@
           </div>
           <button id="lyrics" type="submit" class="btn btn-warning">Show me the lyrics!</button>
         </form>
+        <div class="result"></div>
+          <p id="gif-two"></p>
       </div>
 
       <!-- shows lyrics when info is entered -->
-      <div class="result"></div>
-        <p id="gif-two"></p>
+      <!-- <div class="result"></div>
+        <p id="gif-two"></p> -->
 
       <div id="button-doover">
         <button class="btn btn-warning" id="try-again-two">Start over</button>

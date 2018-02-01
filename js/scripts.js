@@ -207,6 +207,7 @@ $(document).ready(function() {
     $("#find-lyrics").fadeOut();
     $("#try-again").fadeOut();
     $("#try-again-three").fadeIn();
+    $("#lyric-add-button").fadeOut();
   });
 
 //when second inspire me button is clicked
@@ -228,6 +229,7 @@ $(document).ready(function() {
     $("#try-again").fadeOut();
     $("#inspire-me").fadeOut();
     $("#find-lyrics").fadeOut();
+    $("#lyric-add-button").fadeOut();
   });
 
 //when lyrics form is submitted
@@ -285,7 +287,7 @@ $(document).ready(function() {
     location.reload();
   });
 
-  $(".jumbotron").click(function() {
+  $(".my-container").click(function() {
     location.reload();
   });
 
@@ -304,8 +306,6 @@ $(document).ready(function() {
     var addArtist = $("input#add-artist").val();
     var addSong = $("input#add-song").val();
     var newSongFormat = addArtist.concat(": " + addSong + "<br>");
-    newSongFormat.toString();
-    playlists.push(newSongFormat);
     $("span#ns-input-span").append(playlists);
     console.log(playlists);
   });

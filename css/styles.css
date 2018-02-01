@@ -1,19 +1,44 @@
-
-
-.jumbotron {
-  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-  text-align: center;
-  background-image:url(http://res.freestockphotos.biz/pictures/8/8616-illustration-of-music-notes-pv.png);
-  color: #F4AD48;
-  margin: 20px;
-  padding: 2.2em;
-  text-shadow: black 1px 2px 1px;
-  opacity: .9;
-  letter-spacing: 2.2px;
-	line-height: 55px;
+body {
+  padding: 50px 0;
+  background-image: url(https://i.stack.imgur.com/HCfU2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.my-container {
+    position: relative;
+    background: #3A80A3;
+    overflow: hidden;
+}
+.my-container:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 170%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('http://cdn.digitaldjtips.com/app/uploads/2012/07/09145914/Vestax-VCI-300-Mk-II.png');
+    background-repeat: no-repeat;
+    background-position: 100% ;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.my-container h1 {
+  font-size: 60px;
+    padding: 50px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    color: #fff;
 }
 
-.jumbotron:hover {
+.my-container:hover {
   cursor: pointer;
 }
 
@@ -22,6 +47,7 @@
 	line-height: 25px;
   text-align: center;
   color: #5F2A30;
+  padding-top: 20px;
 }
 
 #song-results {
@@ -87,13 +113,9 @@ h4 {
   font-family: 'Vollkorn', Georgia, Times, serif;
 }
 
-.row {
-  width: 100%;
-}
-
-#gif {
+/*#gif {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-}
+}*/
