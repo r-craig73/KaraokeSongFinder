@@ -27,12 +27,14 @@ var party = [
   "Dolly Parton: 9 to 5",
   "Carrie Underwood: Before He Cheats",
   "Fleetwood Mac: Go Your Own Way",
+  "Journey: Don&#39t Stop Believin&#39",
   "Aretha Franklin: Respect",
   "The B-52S: Love Shack",
   "Queen: Bohemian Rhapsody",
   "Alanis Morissette: You Oughta Know",
   "No Doubt: Just a Girl",
   "'N Sync: Bye, Bye, Bye",
+  "Temptations: My Girl",
   "Madonna: Like A Prayer",
   "Destiny's Child: Say My Name",
   "Justin Timberlake: Can't Stop The Feeling!",
@@ -49,7 +51,6 @@ var lit = [
   "Miley Cyrus: Party in the USA",
   "Ginuwine: Pony",
   "Christina Aguilera: Genie In A Bottle",
-  "Calvin Harris feat. Rihanna: This Is What You Came For",
   "The Weeknd feat. Daft Punk: Starboy",
   "ABBA: Dancing Queen",
   "Lynyrd Skynyrd: Sweet Home Alabama",
@@ -67,7 +68,6 @@ var allSongs = [
   "Def Leppard: Pour Some Sugar On Me",
   "Ginuwine: Pony",
   "Christina Aguilera: Genie In A Bottle",
-  "Calvin Harris feat. Rihanna: This Is What You Came For",
   "The Weeknd feat. Daft Punk: Starboy",
   "ABBA: Dancing Queen",
   "Lynyrd Skynyrd: Sweet Home Alabama",
@@ -90,6 +90,7 @@ var allSongs = [
   "Spice Girls: Wannabe",
   "Village People: YMCA",
   "Sublime: Santeria",
+  "Temptations: My Girl",
   "The Cranberries: Zombie",
   "Drake: Hotline Bling",
   "Dolly Parton: 9 to 5",
@@ -205,7 +206,6 @@ $(document).ready(function() {
     $("#find-lyrics").fadeOut();
     $("#try-again").fadeOut();
     $("#try-again-three").fadeIn();
-    $("#lyric-add-button").fadeOut();
   });
 
 //when second inspire me button is clicked
@@ -227,7 +227,6 @@ $(document).ready(function() {
     $("#try-again").fadeOut();
     $("#inspire-me").fadeOut();
     $("#find-lyrics").fadeOut();
-    $("#lyric-add-button").fadeOut();
   });
 
 //when lyrics form is submitted
@@ -285,7 +284,7 @@ $(document).ready(function() {
     location.reload();
   });
 
-  $(".my-container").click(function() {
+  $(".jumbotron").click(function() {
     location.reload();
   });
 
@@ -296,7 +295,6 @@ $(document).ready(function() {
 // when 'Make a playlist' button is clicked
   $("button#lyric-add-button").click(function(){
     $("#new-song-section").fadeIn();
-    $("#buttons").hide();
   });
 
   $("form#lyric-add").submit(function(event) {
@@ -305,6 +303,7 @@ $(document).ready(function() {
     var addArtist = $("input#add-artist").val();
     var addSong = $("input#add-song").val();
     var newSongFormat = addArtist.concat(": " + addSong + "<br>");
+    newSongFormat.toString();
     $("span#ns-input-span").append(playlists);
     console.log(playlists);
   });
@@ -312,5 +311,7 @@ $(document).ready(function() {
 // save playlist button
     $("button#save-playlist-button").click(function(){
       $("#new-song-section").fadeOut();
+      var playlists = [];
+      // $("span#ns-input-span").clearQueue();
     });
 });
