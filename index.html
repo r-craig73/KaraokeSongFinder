@@ -3,7 +3,7 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans' rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
     <script src="js/jquery-3.3.1.js"></script>
@@ -13,8 +13,8 @@
   <body>
 
     <div class="container">
-      <div class="jumbotron">
-        <h1>Karaoke Selector</h1>
+      <div class="my-container">
+        <h1>Karaoke Song Selector</h1>
       </div>
       <br>
       <div id="intro">
@@ -112,6 +112,8 @@
         </div>
       </div>
 
+      <div id="gif"></div>
+
       <!-- if try again button is clicked - goes back to original screen-->
 
       <!-- if lyrics button is clicked -->
@@ -127,11 +129,13 @@
           </div>
           <button id="lyrics" type="submit" class="btn btn-warning">Show me the lyrics!</button>
         </form>
+        <div class="result"></div>
+          <p id="gif-two"></p>
       </div>
 
       <!-- shows lyrics when info is entered -->
-      <div class="result"></div>
-        <p id="gif-two"></p>
+      <!-- <div class="result"></div>
+        <p id="gif-two"></p> -->
 
       <div id="button-doover">
         <button class="btn btn-warning" id="try-again-two">Start over</button>
@@ -139,19 +143,19 @@
         <button class="btn btn-warning" id="try-again-three">Do it again!</button>
       </div>
 
-      <!-- inputting a new song KJ request -->
+      <!-- inputting a new song request -->
       <div id="new-song-section">
-        <p>Thought of a new song to sing? Add the song and artist to your saved playlist.</p>
+        <h3 id="inspired-to-sing">Inspired to sing a song? Add it to your playlist to sing later!</h3>
         <form id="lyric-add">
           <div class="form-group">
             <label for="add-song">Enter a song:</label>
-            <input id="add-song" class="form-control" type="text" required>
+            <input id="add-song" type="text" required>
           </div>
           <div class="form-group">
             <label for="add-artist">Enter the artist:</label>
-            <input id="add-artist" class="form-control" type="text" required>
+            <input id="add-artist" type="text" required>
           </div>
-          <button id="add-song-to-playlist" type="submit" class="btn btn-warning">Add playlist!</button>
+          <button id="add-song-to-playlist" type="submit" class="btn btn-warning">Add to playlist!</button>
           <br>
         </form>
 
@@ -160,7 +164,6 @@
       <!-- </div class="well" id="ns-input-well"> -->
         <h4><span id="ns-input-span"></span></h4>
       </div>
-
 
     </div>
   </body>
