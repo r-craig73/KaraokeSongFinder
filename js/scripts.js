@@ -168,6 +168,7 @@ $(document).ready(function() {
     $("#try-again").fadeIn();
     $("#find-lyrics").fadeIn();
     $("#inspire-me").fadeIn();
+    $("#lyric-add-button").fadeIn();
     $(".form-questions").hide();
     $("#show-form").hide();
     $("#random").hide();
@@ -189,7 +190,9 @@ $(document).ready(function() {
     $("#try-again").show();
     $("#find-lyrics").show();
     $("#inspire-me").show();
+    $("#lyric-add-button").show();
     $("#intro").hide();
+
   });
 
 //when inspire me button is clicked
@@ -270,15 +273,19 @@ $(document).ready(function() {
     location.reload();
   });
 
-  $("#lyric-add").submit(function(event) {
+  // when 'Make a playlist' button is clicked
+  $("button#lyric-add-button").click(function(){
+    $("#new-song-section").fadeIn();
+  });
+
+  // when 'Make a playlist' button is clicked
+  $("form#lyric-add").submit(function(event) {
     event.preventDefault();
     var playlists = [];
     var addArtist = $("input#add-artist").val();
     var addSong = $("input#add-song").val();
     var newSongFormat = addArtist.concat(": " + addSong + "<br>");
     newSongFormat.toString();
-    console.log(newSongFormat);
-    console.log("Your request has been submitted!");
     playlists.push(newSongFormat);
     $("span#ns-input-span").append(playlists);
     console.log(playlists);

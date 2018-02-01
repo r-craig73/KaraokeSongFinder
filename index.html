@@ -95,14 +95,17 @@
 
       <div id="buttons">
         <div class="row">
-          <div class="col-md-4 text-center">
+          <div class="col-md-3 text-center">
             <button class="btn btn-warning" id="try-again">Try again!</button>
           </div>
-          <div class="col-md-4 text-center">
+          <div class="col-md-3 text-center">
             <button class="btn btn-warning" id="inspire-me">Inspire me!</button>
           </div>
-          <div class="col-md-4 text-center">
+          <div class="col-md-3 text-center">
             <button class="btn btn-warning" id="find-lyrics">Find the lyrics!</button>
+          </div>
+          <div class="col-md-3 text-center">
+            <button class="btn btn-warning" id="lyric-add-button">Make a playlist!</button>
           </div>
 
         </div>
@@ -141,27 +144,22 @@
       </div>
 
       <!-- inputting a new song KJ request -->
-      <div>
+      <div id="new-song-section">
         <p>Thought of a new song to sing? Add the song and artist to your saved playlist.</p>
         <form id="lyric-add">
           <div class="form-group">
             <label for="add-song">Enter a song:</label>
-            <input id="add-song" class="form-control" type="text">
+            <input id="add-song" class="form-control" type="text" required>
           </div>
           <div class="form-group">
             <label for="add-artist">Enter the artist:</label>
-            <input id="add-artist" class="form-control" type="text">
+            <input id="add-artist" class="form-control" type="text" required>
           </div>
-
-            <button id="add-song" type="submit" class="btn btn-warning">Add playlist!</button>
-              <br>
-
+          <button id="add-song-to-playlist" type="submit" class="btn btn-warning">Add playlist!</button>
+          <br>
         </form>
-
-      </div class="well" id="ns-input-well">
-
-            <h4><span id="ns-input-span"></span></h4>
-
+      <!-- </div class="well" id="ns-input-well"> -->
+        <h4><span id="ns-input-span"></span></h4>
       </div>
 
 
