@@ -1,43 +1,66 @@
 # Karaoke Song Finder
 
-#### by Kaila, Maggie, Masen and Ron
+#### _A application that helps a user select a karaoke song based on input. 2-1-18_
 
-### A website helping a user select a karaoke song, based on the user's
-### mood and vibe.
+#### _By Kaila Goff, Maggie Summers, Masen Matthews and Ron Craig_
 
-### GitHub repository: https://github.com/r-craig73/KaraokeSongFinder
-### GitHub Page: https://r-craig73.github.io/KaraokeSongFinder/
+## Description
 
-## App goals
-### Things we NEED
-  1. Input fields for "vibe", mood" and "intoxication"
-  2. Buttons to direct the user to answer questions, show a random song, show a song after answering questions and partial lyrics.
-  3. Use a function formula to pick a song based one vibe, mood and intoxication conditions.
-  4. Use a function formula to pick a random song
-  5. Implement an API to display lyrics to popular songs
-  6. Use CSS and Bootstrap to create a visually appealing, polished product
-  7. Use a playlist to view and simulate saving karaoke songs
+_This app helps a user find the right karaoke song based on their mood, vibe and intoxication level. Other capabilities include searching for the lyrics to a song, adding songs to a playlist, and getting inspired for the big moment._
 
-### Things we WANT
-  1. Solo, duet or group setting
+### Specifications
+  1. The user chooses "Questions" or "Random".
 
-### Wishlist
-  1. A YouTube API or search to view official videos, if available
-  2. Store songs into a database
+  2. If user chooses "Questions," the user will then choose their responses for input fields "vibe", "mood" and "intoxication". Based on those responses, the app gives them a song.
+
+  3. User can then choose "Try Again," "Inspire Me," or "Find the Lyrics".
+
+  4. If user chooses "Inspire Me," a random inspirational GIF from Giphy API populates the screen.
+
+  5. If user chooses "Find the Lyrics," a form populates for user input of song and artist. The lyrics are returned using the Musixmatch API.
+
+  6. If user chooses "Try Again," the page is refreshed for another turn.
+
+  7. If user chooses "Make a Playlist," the user can input a song and artist to add to a playlist for a future karaoke session.   
+
+  8. If user chooses "Random," a random song is displayed on the page. Then steps 3-7 activate.
+
+
+## Setup/Installation Requirements
+
+* _View and use webpage here:_ https://r-craig73.github.io/KaraokeSongFinder/
+
+* _Clone repository_
+
+* _Open in text editor_
+
+* _Open in browser_
+
+* _Mirror push to the new repository_
+
 
 ## Known Bugs
-_None at the moment_
+
+* _One of two Inspire Me buttons lacks functionality on the right half of the button._
+
+* _There is a possibility that a song inputted into the lyrics finder will not be available._
 
 ## Support and contact details
 
-_Any questions, please contact Ron Craig (ron.craig@comcast.net)_
+_To suggest changes, submit a pull request in the GitHub repository._
 
 ## Technologies Used
 
-_Using HTML, JavaScript, jQuery, and bootstrap_
+* HTML
+* CSS
+* JavaScript
+* jQuery 3.2.1
+* Bootstrap 4.0.0
+* Giphy API
+* Musixmatch API
 
 ### License
 
 *MIT License*
 
-Copyright (c) 2018 **_RonC productions_**
+Copyright (c) 2018 **_Kaila Goff, Maggie Summers, Masen Matthews and Ron Craig_**

@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans' rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Karaoke Song Finder</title>
-  </head>
-  <body>
 
-    <div class="container">
-      <div class="my-container">
-        <h1>Karaoke Song Selector</h1>
-      </div>
-      <br>
-      <div id="intro">
-        <h2>Going to karaoke and don't know what to sing? We can help!</h2>
-        <h3>Click on Questions to get started, or take your chances and click Random.</h3>
-      </div>
-      <br>
-      <div class="container" id="button-container">
-        <div class="row">
-          <div class="col-md-6 text-center">
-            <button class="btn btn-warning" id="show-form">Answer Some Questions</button>
-          </div>
-          <div class="col-md-6 text-center">
-            <button class="btn btn-warning" id="random">Just Show Me A Random Song!</button>
-          </div>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans' rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Karaoke Song Finder</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="header">
+      <h1>Karaoke Song Selector</h1>
+    </div>
+    <br>
+    <div id="intro">
+      <h2>Going to karaoke and don't know what to sing? We can help!</h2>
+      <h3>Click on Questions to get started, or take your chances and click Random.</h3>
+    </div>
+    <br>
+    <div class="container" id="button-container">
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <button class="btn btn-warning" id="show-form">Answer Some Questions</button>
+        </div>
+        <div class="col-md-6 text-center">
+          <button class="btn btn-warning" id="random">Just Show Me A Random Song!</button>
         </div>
       </div>
+    </div>
 
-      <!-- if show-form button is clicked -->
-      <div id="form-questions">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="questions">
-              <h5>How are you feeling?</h5>
-              <select class="form-control" id="mood">
+    <!-- if show-form button is clicked -->
+    <div id="form-questions">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="questions">
+            <h5>How are you feeling?</h5>
+            <select class="form-control" id="mood">
                 <option value="blank"></option>
                 <option value="1">Not fully awake yet</option>
                 <option value="2">Feeling chill</option>
@@ -47,14 +48,14 @@
                 <option value="4">Let's party!</option>
                 <option value="5">Shots for everyone!</option>
               </select><br>
-            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="questions">
-              <h5>What's the vibe of your night?</h5>
-              <select class="form-control" id="vibe">
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="questions">
+            <h5>What's the vibe of your night?</h5>
+            <select class="form-control" id="vibe">
                 <option value="blank"></option>
                 <option value="1">Just me, hanging solo...</option>
                 <option value="2">Hanging with a group of friends</option>
@@ -62,15 +63,15 @@
                 <option value="4">Things are heating up</option>
                 <option value="5">Ready to burn down the house</option>
               </select>
-            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="questions">
-              <br>
-              <h5>What's your intoxication status?</h5>
-              <select class="form-control" id="intox">
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="questions">
+            <br>
+            <h5>What's your intoxication status?</h5>
+            <select class="form-control" id="intox">
                 <option value="blank"></option>
                 <option value="1">Sober AF</option>
                 <option value="2">A little tipsy</option>
@@ -78,93 +79,94 @@
                 <option value="4">Definitely feeling it</option>
                 <option value="5">Please take my keys away</option>
               </select><br><br>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <button class="btn btn-warning" id="show-song">Show me what song I should sing!</button>
           </div>
         </div>
       </div>
-
-      <!-- after show my song button is clicked -->
-      <div id="results-2">
-        <h3 id="text-result"></h3>
-        <h1 id="song-results"></h1>
-      </div>
-
-      <div id="buttons">
-        <div class="row">
-          <div class="col-md-3 text-center">
-            <button class="btn btn-warning" id="try-again">Try again!</button>
-          </div>
-          <div class="col-md-3 text-center">
-            <button class="btn btn-warning" id="inspire-me">Inspire me!</button>
-          </div>
-          <div class="col-md-3 text-center">
-            <button class="btn btn-warning" id="find-lyrics">Find the lyrics!</button>
-          </div>
-          <div class="col-md-3 text-center">
-            <button class="btn btn-warning" id="lyric-add-button">Make a playlist!</button>
-          </div>
-
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-warning" id="show-song">Show me what song I should sing!</button>
         </div>
       </div>
+    </div>
 
-      <div id="gif"></div>
+    <!-- after show my song button is clicked -->
+    <div id="results-2">
+      <h3 id="text-result"></h3>
+      <h1 id="song-results"></h1>
+    </div>
 
-      <!-- if try again button is clicked - goes back to original screen-->
+    <div id="buttons">
+      <div class="row">
+        <div class="col-md-3 text-center">
+          <button class="btn btn-warning" id="try-again">Try again!</button>
+        </div>
+        <div class="col-md-3 text-center">
+          <button class="btn btn-warning" id="inspire-me">Inspire me!</button>
+        </div>
+        <div class="col-md-3 text-center">
+          <button class="btn btn-warning" id="find-lyrics">Find the lyrics!</button>
+        </div>
+        <div class="col-md-3 text-center">
+          <button class="btn btn-warning" id="lyric-add-button">Make a playlist!</button>
+        </div>
 
-      <!-- if lyrics button is clicked -->
-      <div>
-        <form id="lyric-search">
-          <div class="form-group">
-            <label for="song">Enter a song:</label>
-            <input id="song" name="artist" required>
-          </div>
-          <div class="form-group">
-            <label for="artist">Enter the artist:</label>
-            <input id="artist" name="artist" required>
-          </div>
-          <button id="lyrics" type="submit" class="btn btn-warning">Show me the lyrics!</button>
-        </form>
-        <div class="result"></div>
-          <p id="gif-two"></p>
       </div>
+    </div>
 
-      <!-- shows lyrics when info is entered -->
-      <!-- <div class="result"></div>
+    <div id="gif"></div>
+
+    <!-- if try again button is clicked - goes back to original screen-->
+
+    <!-- if lyrics button is clicked -->
+    <div>
+      <form id="lyric-search">
+        <div class="form-group">
+          <label for="song">Enter a song:</label>
+          <input id="song" name="artist" required>
+        </div>
+        <div class="form-group">
+          <label for="artist">Enter the artist:</label>
+          <input id="artist" name="artist" required>
+        </div>
+        <button id="lyrics" type="submit" class="btn btn-warning">Show me the lyrics!</button>
+      </form>
+      <div class="result"></div>
+      <p id="gif-two"></p>
+    </div>
+
+    <!-- shows lyrics when info is entered -->
+    <!-- <div class="result"></div>
         <p id="gif-two"></p> -->
 
-      <div id="button-doover">
-        <button class="btn btn-warning" id="try-again-two">Start over</button>
-        <button class="btn btn-warning" id="inspire-me-two">Inspire me!</button>
-        <button class="btn btn-warning" id="try-again-three">Do it again!</button>
-      </div>
-
-      <!-- inputting a new song request -->
-      <div id="new-song-section">
-        <h3 id="inspired-to-sing">Inspired to sing a song? Add it to your playlist to sing later!</h3>
-        <form id="lyric-add">
-          <div class="form-group">
-            <label for="add-song">Enter a song:</label>
-            <input id="add-song" type="text" required>
-          </div>
-          <div class="form-group">
-            <label for="add-artist">Enter the artist:</label>
-            <input id="add-artist" type="text" required>
-          </div>
-          <button id="add-song-to-playlist" type="submit" class="btn btn-warning">Add to playlist!</button>
-          <br>
-        </form>
-
-        <button class="btn btn-warning" id="save-playlist-button">Save your playlist!</button>
-
-      <!-- </div class="well" id="ns-input-well"> -->
-        <h4><span id="ns-input-span"></span></h4>
-      </div>
-
+    <div id="button-doover">
+      <button class="btn btn-warning" id="try-again-two">Start over</button>
+      <button class="btn btn-warning" id="inspire-me-two">Inspire me!</button>
+      <button class="btn btn-warning" id="try-again-three">Do it again!</button>
     </div>
-  </body>
+
+    <!-- inputting a new song request -->
+    <div id="new-song-section">
+      <h3 id="inspired-to-sing">Inspired to sing a song? Add it to your playlist to sing later!</h3>
+      <form id="lyric-add">
+        <div class="form-group">
+          <label for="add-song">Enter a song:</label>
+          <input id="add-song" type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="add-artist">Enter the artist:</label>
+          <input id="add-artist" type="text" required>
+        </div>
+        <button id="add-song-to-playlist" type="submit" class="btn btn-warning">Add to playlist!</button>
+        <br>
+      </form>
+
+      <div class="well" id="ns-input-well">
+        <h4><span id="ns-input-span"></span></h4>
+        <button class="btn btn-warning" id="save-playlist-button">Save your playlist!</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
 </html>

@@ -163,17 +163,8 @@ $(document).ready(function() {
     $("#try-again").fadeIn();
     $("#find-lyrics").fadeIn();
     $("#inspire-me").fadeIn();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    $("#lyric-add-button").fadeIn();
-    $(".form-questions").hide();
-=======
-    $("#form-questions").hide();
->>>>>>> maggiekaila
-=======
     $("#form-questions").hide();
     $("#lyric-add-button").fadeIn();
->>>>>>> 82177f754a880ff5eeef08f4361f648f5ca83dfa
     $("#show-form").hide();
     $("#random").hide();
     $("#intro").hide();
@@ -215,6 +206,7 @@ $(document).ready(function() {
     $("#try-again").fadeOut();
     $("#try-again-three").fadeIn();
     $("#lyric-add-button").fadeOut();
+    $("#new-song-section").fadeOut();
   });
 
 //when second inspire me button is clicked
@@ -237,6 +229,7 @@ $(document).ready(function() {
     $("#inspire-me").fadeOut();
     $("#find-lyrics").fadeOut();
     $("#lyric-add-button").fadeOut();
+    $("#new-song-section").fadeOut();
   });
 
 //when lyrics form is submitted
@@ -305,7 +298,7 @@ $(document).ready(function() {
 // when 'Make a playlist' button is clicked
   $("button#lyric-add-button").click(function(){
     $("#new-song-section").fadeIn();
-    $("#buttons").hide();
+    // $("#buttons").hide();
   });
 
   $("form#lyric-add").submit(function(event) {
@@ -315,6 +308,7 @@ $(document).ready(function() {
     var addSong = $("input#add-song").val();
     var newSongFormat = addArtist.concat(": " + addSong + "<br>");
     $("span#ns-input-span").append(playlists);
+    $("#ns-input-well").show();
     console.log(playlists);
   });
 
