@@ -33,6 +33,7 @@ var party = [
   "Alanis Morissette: You Oughta Know",
   "No Doubt: Just a Girl",
   "'N Sync: Bye, Bye, Bye",
+  "Temptations: My Girl",
   "Madonna: Like A Prayer",
   "Destiny's Child: Say My Name",
   "Justin Timberlake: Can't Stop The Feeling!",
@@ -49,7 +50,6 @@ var lit = [
   "Miley Cyrus: Party in the USA",
   "Ginuwine: Pony",
   "Christina Aguilera: Genie In A Bottle",
-  "Calvin Harris feat. Rihanna: This Is What You Came For",
   "The Weeknd feat. Daft Punk: Starboy",
   "ABBA: Dancing Queen",
   "Lynyrd Skynyrd: Sweet Home Alabama",
@@ -67,7 +67,6 @@ var allSongs = [
   "Def Leppard: Pour Some Sugar On Me",
   "Ginuwine: Pony",
   "Christina Aguilera: Genie In A Bottle",
-  "Calvin Harris feat. Rihanna: This Is What You Came For",
   "The Weeknd feat. Daft Punk: Starboy",
   "ABBA: Dancing Queen",
   "Lynyrd Skynyrd: Sweet Home Alabama",
@@ -90,6 +89,7 @@ var allSongs = [
   "Spice Girls: Wannabe",
   "Village People: YMCA",
   "Sublime: Santeria",
+  "Temptations: My Girl",
   "The Cranberries: Zombie",
   "Drake: Hotline Bling",
   "Dolly Parton: 9 to 5",
@@ -306,11 +306,34 @@ $(document).ready(function() {
     location.reload();
   });
 
-  $(".my-container").click(function() {
+  $(".jumbotron").click(function() {
     location.reload();
   });
 
   $("button#try-again-three").click(function() {
     location.reload();
   });
+
+// when 'Make a playlist' button is clicked
+  $("button#lyric-add-button").click(function(){
+    $("#new-song-section").fadeIn();
+  });
+
+  $("form#lyric-add").submit(function(event) {
+    event.preventDefault();
+    var playlists = [];
+    var addArtist = $("input#add-artist").val();
+    var addSong = $("input#add-song").val();
+    var newSongFormat = addArtist.concat(": " + addSong + "<br>");
+    newSongFormat.toString();
+    $("span#ns-input-span").append(playlists);
+    console.log(playlists);
+  });
+
+// save playlist button
+    $("button#save-playlist-button").click(function(){
+      $("#new-song-section").fadeOut();
+      var playlists = [];
+      // $("span#ns-input-span").clearQueue();
+    });
 });
