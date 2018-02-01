@@ -35,7 +35,8 @@ body {
     text-align: center;
     z-index: 2;
     position: relative;
-    color: #fff;
+    color: white;
+    text-shadow: 2px 2px black;
 }
 
 .my-container:hover {
