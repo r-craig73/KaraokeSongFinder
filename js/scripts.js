@@ -166,6 +166,7 @@ $(document).ready(function() {
     $("#find-lyrics").fadeIn();
     $("#inspire-me").fadeIn();
     $("#form-questions").hide();
+    $("#lyric-add-button").fadeIn();
     $("#show-form").hide();
     $("#random").hide();
     $("#intro").hide();
@@ -187,7 +188,9 @@ $(document).ready(function() {
     $("#try-again").show();
     $("#find-lyrics").show();
     $("#inspire-me").show();
+    $("#lyric-add-button").show();
     $("#intro").hide();
+
   });
 
 //when inspire me button is clicked
@@ -288,5 +291,22 @@ $(document).ready(function() {
 
   $("button#try-again-three").click(function() {
     location.reload();
+  });
+
+  // when 'Make a playlist' button is clicked
+  $("button#lyric-add-button").click(function(){
+    $("#new-song-section").fadeIn();
+  });
+
+  $("form#lyric-add").submit(function(event) {
+    event.preventDefault();
+    var playlists = [];
+    var addArtist = $("input#add-artist").val();
+    var addSong = $("input#add-song").val();
+    var newSongFormat = addArtist.concat(": " + addSong + "<br>");
+    newSongFormat.toString();
+    playlists.push(newSongFormat);
+    $("span#ns-input-span").append(playlists);
+    console.log(playlists);
   });
 });

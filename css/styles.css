@@ -42,7 +42,8 @@
 }
 
 .btn {
-  background-color: #F45A1F;
+  background-color: white;
+  /*F45A1F*/
   color: #5F2A30;
   font-size: 15px;
   padding: 22px;
@@ -67,18 +68,16 @@
 h4 {
   font-family: 'Vollkorn', Georgia, Times, serif;
 	font-size: 20px;
-	line-height: 25px;
-  text-align: center;
+	/*line-height: 25px;*/
+  /*text-align: center;*/
   color: #5F2A30;
-  background-color: #E1D0AA;
-  width: 800px;
-  border: 10px solid #F45A1F;
+  /*width: 800px;*/
   padding: 50px;
   margin: 20px 75px 20px 20px;
   text-align: center;
 }
 
- #try-again, #try-again-two, #try-again-three, #lyric-search, #find-lyrics, #inspire-me, #keep-inspiring, #inspire-me-two, #form-questions {
+ #try-again, #try-again-two, #try-again-three, #lyric-search, #find-lyrics, #inspire-me, #keep-inspiring, #inspire-me-two, #form-questions, #lyric-add-button, #new-song-section {
    display: none;
  }
 
