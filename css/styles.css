@@ -50,51 +50,23 @@ h1 {
 }
 
 h4 {
-  background-color: lightgrey;
+  font-family: 'Vollkorn', Georgia, Times, serif;
+	font-size: 20px;
+	line-height: 25px;
+  text-align: center;
+  color: #5F2A30;
+  background-color: #E1D0AA;
   width: 800px;
-  border: 10px solid green;
+  border: 10px solid #F45A1F;
   padding: 50px;
   margin: 20px 75px 20px 20px;
   text-align: center;
 
-
-/*input:valid {
-  border: 2px solid black;
-
-}*/
-
-
-
-
+}
 
 #show {
   width: 100%;
 }
-
-
- /*#container-two {
-   opacity: .8;
-   background-color: blue;
-   padding-top: 20px;
-   padding-bottom: 20px;
- }
-
- #container-three {
-   background-color: #82E0AA;
-   padding-top: 20px;
-   padding-bottom: 20px;
- }
-
- #container-four {
-   *display: hide;
-   background-color: gray;
-   padding-top: 20px;
-   padding-bottom: 20px;
- }
-
-/*#lyrics, #song-results {
-  display: hide;
-}*/
 
  #try-again, #try-again-two, #try-again-three, #lyric-search, #find-lyrics, #inspire-me, #keep-inspiring {
    display: none;
