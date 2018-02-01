@@ -72,14 +72,11 @@ h4 {
   color: #5F2A30;
   /*width: 800px;*/
   padding: 50px;
-  margin: 20px;
+  margin: 20px 75px 20px 20px;
+  text-align: center;
 }
 
-#show {
-  width: 100%;
-}
-
- #try-again, #try-again-two, #try-again-three, #lyric-search, #find-lyrics, #inspire-me, #keep-inspiring, #lyric-add-button, #new-song-section {
+ #try-again, #try-again-two, #try-again-three, #lyric-search, #find-lyrics, #inspire-me, #keep-inspiring, #inspire-me-two, #form-questions, #lyric-add-button, #new-song-section {
    display: none;
  }
 
