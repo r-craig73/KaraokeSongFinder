@@ -127,7 +127,6 @@ Song.prototype.songRecommendation = function() {
 Song.prototype.textResponse = function(chillRandom, partyRandom, litRandom) {
   if (this.songRecommendation() === chillRandom) {
     return ("Looks like you're taking it easy tonight. How does this song sound?");
-    console.log(this.songRecommendation());
   } else if (this.songRecommendation() === partyRandom) {
     return ("Trying to party? Try this song.");
   } else if (this.songRecommendation() === litRandom) {
@@ -170,9 +169,9 @@ $(document).ready(function() {
     $("#intro").hide();
 
     var reset = function() {
-      $("select#mood").val("");
-      $("select#vibe").val("");
-      $("select#intox").val("");
+    $("select#mood").val("");
+    $("select#vibe").val("");
+    $("select#intox").val("");
     }
   });
 
@@ -188,7 +187,6 @@ $(document).ready(function() {
     $("#inspire-me").show();
     $("#lyric-add-button").show();
     $("#intro").hide();
-
   });
 
 //when inspire me button is clicked
@@ -278,7 +276,28 @@ $(document).ready(function() {
     $("span#ns-input-span").append(playlists);
   });
 
-//when try again buttons are submitted
+// when make a playlist button is clicked
+  $("button#lyric-add-button").click(function(){
+    $("#new-song-section").fadeIn();
+    // $("#buttons").hide();
+  });
+
+  $("form#lyric-add").submit(function(event) {
+    event.preventDefault();
+    var playlists = [];
+    var addArtist = $("input#add-artist").val();
+    var addSong = $("input#add-song").val();
+    var newSongFormat = addArtist.concat(": " + addSong + "<br>");
+    $("span#ns-input-span").append(playlists);
+    $("#ns-input-well").show();
+  });
+
+// save playlist button
+  $("button#save-playlist-button").click(function(){
+    $("#new-song-section").fadeOut();
+  });
+
+// when try again buttons are submitted
   $("button#try-again").click(function() {
     location.reload();
   });
@@ -294,26 +313,4 @@ $(document).ready(function() {
   $("button#try-again-three").click(function() {
     location.reload();
   });
-
-// when 'Make a playlist' button is clicked
-  $("button#lyric-add-button").click(function(){
-    $("#new-song-section").fadeIn();
-    // $("#buttons").hide();
-  });
-
-  $("form#lyric-add").submit(function(event) {
-    event.preventDefault();
-    var playlists = [];
-    var addArtist = $("input#add-artist").val();
-    var addSong = $("input#add-song").val();
-    var newSongFormat = addArtist.concat(": " + addSong + "<br>");
-    $("span#ns-input-span").append(playlists);
-    $("#ns-input-well").show();
-    console.log(playlists);
-  });
-
-// save playlist button
-    $("button#save-playlist-button").click(function(){
-      $("#new-song-section").fadeOut();
-    });
 });
