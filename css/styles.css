@@ -23,6 +23,10 @@ body {
 	line-height: 55px;
 }
 
+.jumbotron:hover {
+  cursor: pointer;
+}
+
 #intro {
   font-family: 'Vollkorn', Georgia, Times, serif;
 	line-height: 25px;
@@ -66,14 +70,14 @@ body {
 }*/
 
 .btn {
-    background-color: #F45A1F;
-    color: #5F2A30;
-    font-size: 15px;
-    padding: 22px;
-    cursor: pointer;
-    border-radius: 50px;
-    font-family: 'Vollkorn', Georgia, Times, serif;
-    text-align: center;
+  background-color: #F45A1F;
+  color: #5F2A30;
+  font-size: 15px;
+  padding: 22px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  text-align: center;
 }
 
 #button-container, #buttons, .button-doover {
@@ -109,4 +113,8 @@ input:valid {
 
 .form-questions {
   display: none;
+}
+
+.row {
+  width: 100%;
 }

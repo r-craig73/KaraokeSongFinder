@@ -264,6 +264,10 @@ $(document).ready(function() {
     location.reload();
   });
 
+  $(".jumbotron").click(function() {
+    location.reload();
+  });
+
   $("button#try-again-three").click(function() {
     location.reload();
   });
