@@ -1,15 +1,21 @@
 body {
-  background: linear-gradient(to top, #E1D0AA, white);
+  /*background: linear-gradient(to top, #E1D0AA, white);*/
+  background-image: $.backstretch("/img/mixer.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
+.container {
+  backgound: url(/)
+}
+
 .jumbotron {
   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
   text-align: center;
-  background-image:url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3676349.jpg);
+  background-image:url(http://res.freestockphotos.biz/pictures/8/8616-illustration-of-music-notes-pv.png);
   color: #F4AD48;
+  margin: 20px;
   padding: 2.2em;
   text-shadow: black 1px 2px 1px;
   opacity: .9;
@@ -17,15 +23,23 @@ body {
 	line-height: 55px;
 }
 
-h3 {
+#intro {
   font-family: 'Vollkorn', Georgia, Times, serif;
-	font-size: 20px;
 	line-height: 25px;
   text-align: center;
   color: #5F2A30;
 }
 
-h1 {
+#keep-inspiring {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+	line-height: 25px;
+  font-size: 30px;
+  margin: 20px;
+  text-align: center;
+  color: #5F2A30;
+}
+
+#song-results {
   font-family: 'Vollkorn', Georgia, Times, serif;
   text-align: center;
   color: #5F2A30;
@@ -33,16 +47,42 @@ h1 {
   padding: 15px;
 }
 
+#text-result {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  text-align: center;
+  font-style: italic;
+  color: #5F2A30;
+  font-size: 50px;
+  padding: 15px;
+}
+
+/*h4 {
+  background-color: lightgrey;
+  width: 800px;
+  border: 10px solid green;
+  padding: 25px;
+  margin: 20px 75px 20px 20px;
+  text-align: center;
+}*/
+
 .btn {
     background-color: #F45A1F;
     color: #5F2A30;
     font-size: 15px;
-    padding: 22px 20px;
+    padding: 22px;
     cursor: pointer;
     border-radius: 50px;
     font-family: 'Vollkorn', Georgia, Times, serif;
     text-align: center;
 }
+
+#button-container, #buttons, .button-doover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
 
 .questions {
   font-family: 'Vollkorn', Georgia, Times, serif;
