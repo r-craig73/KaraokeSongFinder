@@ -306,34 +306,11 @@ $(document).ready(function() {
     location.reload();
   });
 
-  $(".jumbotron").click(function() {
+  $("#header").click(function() {
     location.reload();
   });
 
   $("button#try-again-three").click(function() {
     location.reload();
   });
-
-// when 'Make a playlist' button is clicked
-  $("button#lyric-add-button").click(function(){
-    $("#new-song-section").fadeIn();
-  });
-
-  $("form#lyric-add").submit(function(event) {
-    event.preventDefault();
-    var playlists = [];
-    var addArtist = $("input#add-artist").val();
-    var addSong = $("input#add-song").val();
-    var newSongFormat = addArtist.concat(": " + addSong + "<br>");
-    newSongFormat.toString();
-    $("span#ns-input-span").append(playlists);
-    console.log(playlists);
-  });
-
-// save playlist button
-    $("button#save-playlist-button").click(function(){
-      $("#new-song-section").fadeOut();
-      var playlists = [];
-      // $("span#ns-input-span").clearQueue();
-    });
 });
