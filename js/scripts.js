@@ -122,7 +122,7 @@ Song.prototype.songRecommendation = function() {
   } else if (this.score >= 10) {
     return (litRandom);
   } else {
-    return("Tell us your mood and vibe and try again.");
+    return("Try again! Answer the questions to see your song!");
   }
 };
 
@@ -134,17 +134,14 @@ Song.prototype.textResponse = function(chillRandom, partyRandom, litRandom) {
     return ("Trying to party? Try this song.");
   } else if (this.songRecommendation() === litRandom) {
     return ("You are ready to get wild. Sing this.");
-  } else {
-    return("this is not working");
-  }
+  } else {}
 };
 
 //ui logic
 $(document).ready(function() {
-
 //when answer questions button is clicked
   $("button#show-form").click(function() {
-    $(".form-questions").fadeIn();
+    $("#form-questions").fadeIn();
     $("#show-form").hide();
     $("#random").hide();
   });
@@ -168,8 +165,8 @@ $(document).ready(function() {
     $("#try-again").fadeIn();
     $("#find-lyrics").fadeIn();
     $("#inspire-me").fadeIn();
+    $("#form-questions").hide();
     $("#lyric-add-button").fadeIn();
-    $(".form-questions").hide();
     $("#show-form").hide();
     $("#random").hide();
     $("#intro").hide();
@@ -185,6 +182,7 @@ $(document).ready(function() {
   $("button#random").click(function() {
     var allSongsRandom = allSongs[Math.floor(Math.random()*allSongs.length)]
     $("#song-results").text(allSongsRandom);
+
     $("#show-form").hide();
     $("#random").hide();
     $("#try-again").show();
@@ -197,10 +195,8 @@ $(document).ready(function() {
 
 //when inspire me button is clicked
   $("button#inspire-me").click(function() {
-    $("#keep-inspiring").show();
-    //gif api
     $.ajax({
-      url: "http://api.giphy.com/v1/gifs/search?&q=karaoke&api_key=dc6zaTOxFJmzC",
+      url: "http://api.giphy.com/v1/gifs/search?&q=singing&api_key=dc6zaTOxFJmzC",
       type: "GET",
     }).done(function(response) {
       var ranNum = (Math.floor(Math.random() * 25) + 1);
@@ -212,6 +208,19 @@ $(document).ready(function() {
     $("#try-again").fadeOut();
     $("#try-again-three").fadeIn();
   });
+
+//when second inspire me button is clicked
+  $("button#inspire-me-two").click(function() {
+    //gif api
+    $.ajax({
+      url: "http://api.giphy.com/v1/gifs/search?&q=karaoke&api_key=dc6zaTOxFJmzC",
+      type: "GET",
+    }).done(function(response) {
+      var ranNum = (Math.floor(Math.random() * 25) + 1);
+      var gifLink = (response.data[ranNum].images.original.url);
+        $("#gif-two").html('<center><img src="'+gifLink+'"></center>');
+      });
+    });
 
 //when find my lyrics button is clicked
   $("button#find-lyrics").click(function() {
@@ -228,8 +237,7 @@ $(document).ready(function() {
     var songSearch = $("input#song").val();
     var artistSearch = $("input#artist").val();
 
-
-    var ajaxCall = function(apiData) { //musixmatch api
+    var ajaxCall = function(apiData) {
     var apikey = 'ac2764373bf0a3d6a7fd0aa221e48c34';
     var result = $.ajax({
       type: "GET",
@@ -246,14 +254,26 @@ $(document).ready(function() {
       jsonpCallback: 'jsonp_callback',
       contentType: 'application/json',
       success: function(data) {
-          console.log(data);
       },
     }).then(function(res) {
-      $('.result').text(res.message.body.lyrics.lyrics_body);
-      $("#try-again-two").show();
+      $(".result").text(res.message.body.lyrics.lyrics_body);
     });
+    $("#try-again-two").show();
+    $("#inspire-me-two").show();
   };
-    $('.result').text(ajaxCall());
+    $(".result").text(ajaxCall());
+  });
+
+//when add song buttons are submitted
+  $("#lyric-add").submit(function(event) {
+    event.preventDefault();
+      var playlists = [];
+      var addArtist = $("input#add-artist").val();
+      var addSong = $("input#add-song").val();
+      var newSongFormat = addArtist.concat(": " + addSong + "<br>");
+    newSongFormat.toString();
+    playlists.push(newSongFormat);
+    $("span#ns-input-span").append(playlists);
   });
 
 //when try again buttons are submitted
@@ -278,7 +298,6 @@ $(document).ready(function() {
     $("#new-song-section").fadeIn();
   });
 
-  // when 'Make a playlist' button is clicked
   $("form#lyric-add").submit(function(event) {
     event.preventDefault();
     var playlists = [];
@@ -290,5 +309,4 @@ $(document).ready(function() {
     $("span#ns-input-span").append(playlists);
     console.log(playlists);
   });
-
 });
