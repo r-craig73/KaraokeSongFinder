@@ -27,7 +27,7 @@ var party = [
   "Dolly Parton: 9 to 5",
   "Carrie Underwood: Before He Cheats",
   "Fleetwood Mac: Go Your Own Way",
-  "Journey: Don’t Stop Believin’",
+  "Journey: Don&#39t Stop Believin&#39",
   "Aretha Franklin: Respect",
   "The B-52S: Love Shack",
   "Queen: Bohemian Rhapsody",
@@ -103,7 +103,7 @@ var allSongs = [
   "Bonnie Tyler: Total Eclipse Of The Heart",
   "Eurythmics: Sweet Dreams (Are Made Of This)",
   "Neil Diamond: Sweet Caroline",
-  "Journey: Don’t Stop Believin’",
+  "Journey: Don&#39t Stop Believin&#39",
   "Queen: Bohemian Rhapsody",
   "Oasis: Wonderwall",
   "R.E.M.: Losing My Religion",
@@ -293,7 +293,7 @@ $(document).ready(function() {
     location.reload();
   });
 
-  // when 'Make a playlist' button is clicked
+// when 'Make a playlist' button is clicked
   $("button#lyric-add-button").click(function(){
     $("#new-song-section").fadeIn();
   });
@@ -305,8 +305,14 @@ $(document).ready(function() {
     var addSong = $("input#add-song").val();
     var newSongFormat = addArtist.concat(": " + addSong + "<br>");
     newSongFormat.toString();
-    playlists.push(newSongFormat);
     $("span#ns-input-span").append(playlists);
     console.log(playlists);
   });
+
+// save playlist button
+    $("button#save-playlist-button").click(function(){
+      $("#new-song-section").fadeOut();
+      var playlists = [];
+      // $("span#ns-input-span").clearQueue();
+    });
 });
