@@ -1,10 +1,4 @@
-body {
-  /*background: linear-gradient(to top, #E1D0AA, white);*/
-  background-image: $.backstretch("/img/mixer.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
+
 
 .jumbotron {
   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
