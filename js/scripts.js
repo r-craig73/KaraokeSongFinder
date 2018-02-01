@@ -27,7 +27,6 @@ var party = [
   "Dolly Parton: 9 to 5",
   "Carrie Underwood: Before He Cheats",
   "Fleetwood Mac: Go Your Own Way",
-  "Journey: Don&#39t Stop Believin&#39",
   "Aretha Franklin: Respect",
   "The B-52S: Love Shack",
   "Queen: Bohemian Rhapsody",
@@ -128,7 +127,6 @@ Song.prototype.songRecommendation = function() {
 Song.prototype.textResponse = function(chillRandom, partyRandom, litRandom) {
   if (this.songRecommendation() === chillRandom) {
     return ("Looks like you're taking it easy tonight. How does this song sound?");
-    console.log(this.songRecommendation());
   } else if (this.songRecommendation() === partyRandom) {
     return ("Trying to party? Try this song.");
   } else if (this.songRecommendation() === litRandom) {
@@ -171,9 +169,9 @@ $(document).ready(function() {
     $("#intro").hide();
 
     var reset = function() {
-      $("select#mood").val("");
-      $("select#vibe").val("");
-      $("select#intox").val("");
+    $("select#mood").val("");
+    $("select#vibe").val("");
+    $("select#intox").val("");
     }
   });
 
@@ -189,7 +187,6 @@ $(document).ready(function() {
     $("#inspire-me").show();
     $("#lyric-add-button").show();
     $("#intro").hide();
-
   });
 
 //when inspire me button is clicked
@@ -206,6 +203,8 @@ $(document).ready(function() {
     $("#find-lyrics").fadeOut();
     $("#try-again").fadeOut();
     $("#try-again-three").fadeIn();
+    $("#lyric-add-button").fadeOut();
+    $("#new-song-section").fadeOut();
   });
 
 //when second inspire me button is clicked
@@ -227,6 +226,8 @@ $(document).ready(function() {
     $("#try-again").fadeOut();
     $("#inspire-me").fadeOut();
     $("#find-lyrics").fadeOut();
+    $("#lyric-add-button").fadeOut();
+    $("#new-song-section").fadeOut();
   });
 
 //when lyrics form is submitted
@@ -275,7 +276,28 @@ $(document).ready(function() {
     $("span#ns-input-span").append(playlists);
   });
 
-//when try again buttons are submitted
+// when make a playlist button is clicked
+  $("button#lyric-add-button").click(function(){
+    $("#new-song-section").fadeIn();
+    // $("#buttons").hide();
+  });
+
+  $("form#lyric-add").submit(function(event) {
+    event.preventDefault();
+    var playlists = [];
+    var addArtist = $("input#add-artist").val();
+    var addSong = $("input#add-song").val();
+    var newSongFormat = addArtist.concat(": " + addSong + "<br>");
+    $("span#ns-input-span").append(playlists);
+    $("#ns-input-well").show();
+  });
+
+// save playlist button
+  $("button#save-playlist-button").click(function(){
+    $("#new-song-section").fadeOut();
+  });
+
+// when try again buttons are submitted
   $("button#try-again").click(function() {
     location.reload();
   });
