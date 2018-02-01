@@ -193,7 +193,7 @@ $(document).ready(function() {
 //when inspire me button is clicked
   $("button#inspire-me").click(function() {
     $.ajax({
-      url: "http://api.giphy.com/v1/gifs/search?&q=karaoke&api_key=dc6zaTOxFJmzC",
+      url: "http://api.giphy.com/v1/gifs/search?&q=singing&api_key=dc6zaTOxFJmzC",
       type: "GET",
     }).done(function(response) {
       var ranNum = (Math.floor(Math.random() * 25) + 1);
