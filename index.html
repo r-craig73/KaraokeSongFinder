@@ -12,16 +12,13 @@
   </head>
   <body>
     <div class="container">
-      <!-- <div class="image">
-        <img src="http://res.freestockphotos.biz/pictures/8/8616-illustration-of-music-notes-pv.png" alt=""><br><br>
-      </div> -->
-      <div class="jumbotron" id="container-one">
+      <div class="jumbotron">
         <h1>Karaoke Selector</h1>
       </div>
       <br>
       <div id="intro">
         <h2>Going to karaoke and don't know what to sing? We can help!</h2>
-        <h3>Click on Questions to get started, or take your chances and click Random.</h4>
+        <h3>Click on Questions to get started, or take your chances and click Random.</h3>
       </div>
       <br>
       <div class="container" id="button-container">
@@ -36,7 +33,7 @@
       </div>
 
       <!-- if show-form button is clicked -->
-      <div class="form-questions">
+      <div id="form-questions">
         <div class="row">
           <div class="col-sm-12">
             <div class="questions">
@@ -83,8 +80,11 @@
             </div>
           </div>
         </div>
-
-        <button class="btn btn-warning" id="show-song">Show me what song I should sing!</button>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button class="btn btn-warning" id="show-song">Show me what song I should sing!</button>
+          </div>
+        </div>
       </div>
 
       <!-- after show my song button is clicked -->
@@ -105,15 +105,8 @@
           <div class="col-md-4 text-center">
             <button class="btn btn-warning" id="find-lyrics">Find the lyrics!</button>
           </div>
-
         </div>
       </div>
-
-      <div>
-
-      </div>
-
-
 
       <!-- if try again button is clicked - goes back to original screen-->
 
@@ -128,15 +121,15 @@
             <label for="artist">Enter the artist:</label>
             <input id="artist" name="artist" required>
           </div>
-
           <button id="lyrics" type="submit" class="btn btn-warning">Show me the lyrics!</button>
         </form>
       </div>
+
       <!-- shows lyrics when info is entered -->
       <div class="result"></div>
         <p id="gif-two"></p>
 
-      <div class="button-doover">
+      <div id="button-doover">
         <button class="btn btn-warning" id="try-again-two">Start over</button>
         <button class="btn btn-warning" id="inspire-me-two">Inspire me!</button>
         <button class="btn btn-warning" id="try-again-three">Do it again!</button>
@@ -155,9 +148,8 @@
             <input id="add-artist" class="form-control" type="text">
           </div>
 
-            <button id="add-song" type="submit" class="btn btn-warning">Add playlist!</button>
-              <br>
-
+          <button id="add-song" type="submit" class="btn btn-warning">Add playlist!</button>
+          <br>
         </form>
 
       </div class="well" id="ns-input-well">

@@ -6,10 +6,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.container {
-  backgound: url(/)
-}
-
 .jumbotron {
   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
   text-align: center;
@@ -34,15 +30,6 @@ body {
   color: #5F2A30;
 }
 
-#keep-inspiring {
-  font-family: 'Vollkorn', Georgia, Times, serif;
-	line-height: 25px;
-  font-size: 30px;
-  margin: 20px;
-  text-align: center;
-  color: #5F2A30;
-}
-
 #song-results {
   font-family: 'Vollkorn', Georgia, Times, serif;
   text-align: center;
@@ -60,15 +47,6 @@ body {
   padding: 15px;
 }
 
-/*h4 {
-  background-color: lightgrey;
-  width: 800px;
-  border: 10px solid green;
-  padding: 25px;
-  margin: 20px 75px 20px 20px;
-  text-align: center;
-}*/
-
 .btn {
   background-color: #F45A1F;
   color: #5F2A30;
@@ -80,16 +58,11 @@ body {
   text-align: center;
 }
 
-#button-container, #buttons, .button-doover {
+#button-container, #buttons, #button-doover {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-}
-
-#find-lyrics {
-  align-items: center;
-  justify-content: center;
 }
 
 .questions {
@@ -109,14 +82,9 @@ h4 {
   padding: 50px;
   margin: 20px 75px 20px 20px;
   text-align: center;
-
 }
 
-#show {
-  width: 100%;
-}
-
- #try-again, #try-again-two, #try-again-three, #lyric-search, #find-lyrics, #inspire-me, #keep-inspiring, #inspire-me-two{
+ #try-again, #try-again-two, #try-again-three, #lyric-search, #find-lyrics, #inspire-me, #keep-inspiring, #inspire-me-two, #form-questions {
    display: none;
  }
 
@@ -124,10 +92,6 @@ h4 {
   color: black;
   padding: 40px;
   font-family: 'Vollkorn', Georgia, Times, serif;
-}
-
-.form-questions {
-  display: none;
 }
 
 .row {
