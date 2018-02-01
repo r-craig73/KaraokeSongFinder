@@ -67,9 +67,16 @@ body {
   padding: 15px;
 }
 
+#inspired-to-sing {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  text-align: center;
+  color: #5F2A30;
+  font-size: 30px;
+  padding: 15px;
+}
+
 .btn {
   background-color: white;
-  /*F45A1F*/
   color: #5F2A30;
   font-size: 15px;
   padding: 22px;
@@ -94,10 +101,7 @@ body {
 h4 {
   font-family: 'Vollkorn', Georgia, Times, serif;
 	font-size: 20px;
-	/*line-height: 25px;*/
-  /*text-align: center;*/
   color: #5F2A30;
-  /*width: 800px;*/
   padding: 50px;
   margin: 20px 75px 20px 20px;
   text-align: center;
@@ -112,10 +116,3 @@ h4 {
   padding: 40px;
   font-family: 'Vollkorn', Georgia, Times, serif;
 }
-
-/*#gif {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-}*/

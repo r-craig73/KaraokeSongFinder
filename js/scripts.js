@@ -298,6 +298,7 @@ $(document).ready(function() {
   // when 'Make a playlist' button is clicked
   $("button#lyric-add-button").click(function(){
     $("#new-song-section").fadeIn();
+    $("#buttons").hide();
   });
 
   $("form#lyric-add").submit(function(event) {
