@@ -87,6 +87,10 @@ body {
   margin-bottom: 30px;
 }
 
+#find-lyrics {
+  align-items: center;
+  justify-content: center;
+}
 
 .questions {
   font-family: 'Vollkorn', Georgia, Times, serif;
@@ -112,7 +116,7 @@ h4 {
   width: 100%;
 }
 
- #try-again, #try-again-two, #try-again-three, #lyric-search, #find-lyrics, #inspire-me, #keep-inspiring {
+ #try-again, #try-again-two, #try-again-three, #lyric-search, #find-lyrics, #inspire-me, #keep-inspiring, #inspire-me-two{
    display: none;
  }
 
@@ -128,4 +132,11 @@ h4 {
 
 .row {
   width: 100%;
+}
+
+#gif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }

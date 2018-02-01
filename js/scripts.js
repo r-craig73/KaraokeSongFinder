@@ -194,7 +194,6 @@ $(document).ready(function() {
 
 //when inspire me button is clicked
   $("button#inspire-me").click(function() {
-    $("#keep-inspiring").show();
     //gif api
     $.ajax({
       url: "http://api.giphy.com/v1/gifs/search?&q=karaoke&api_key=dc6zaTOxFJmzC",
@@ -209,6 +208,18 @@ $(document).ready(function() {
     $("#try-again").fadeOut();
     $("#try-again-three").fadeIn();
   });
+//when second inspire me button is clicked
+  $("button#inspire-me-two").click(function() {
+    //gif api
+    $.ajax({
+      url: "http://api.giphy.com/v1/gifs/search?&q=karaoke&api_key=dc6zaTOxFJmzC",
+      type: "GET",
+    }).done(function(response) {
+      var ranNum = (Math.floor(Math.random() * 25) + 1);
+      var gifLink = (response.data[ranNum].images.original.url);
+        $("#gif-two").html('<center><img src="'+gifLink+'"></center>');
+      });
+    });
 
 //when find my lyrics button is clicked
   $("button#find-lyrics").click(function() {
@@ -248,6 +259,7 @@ $(document).ready(function() {
     }).then(function(res) {
       $('.result').text(res.message.body.lyrics.lyrics_body);
       $("#try-again-two").show();
+      $("#inspire-me-two").show();
     });
   };
     $('.result').text(ajaxCall());
