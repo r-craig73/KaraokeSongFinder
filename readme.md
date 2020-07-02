@@ -1,6 +1,6 @@
 # Karaoke Song Finder
 
-#### _A application that helps a user select a karaoke song based on input. 2-1-18_
+#### _An application that helps a user select a karaoke song based on the user's inputs. 2018-02-01_
 
 #### _By Kaila Goff, Maggie Summers, Masen Matthews and Ron Craig_
 
@@ -11,9 +11,9 @@ _This app helps a user find the right karaoke song based on their mood, vibe and
 ### Specifications
   1. The user chooses "Questions" or "Random".
 
-  2. If user chooses "Questions," the user will then choose their responses for input fields "vibe", "mood" and "intoxication". Based on those responses, the app gives them a song.
+  2. If user chooses "Questions," the user will then choose their responses for input fields "vibe", "mood" and "intoxication". Based on those responses, the app gives the user a song.
 
-  3. User can then choose "Try Again," "Inspire Me," or "Find the Lyrics".
+  3. User can choose between "Try Again," "Inspire Me," or "Find the Lyrics".
 
   4. If user chooses "Inspire Me," a random inspirational GIF from Giphy API populates the screen.
 
@@ -24,7 +24,6 @@ _This app helps a user find the right karaoke song based on their mood, vibe and
   7. If user chooses "Make a Playlist," the user can input a song and artist to add to a playlist for a future karaoke session.   
 
   8. If user chooses "Random," a random song is displayed on the page. Then steps 3-7 activate.
-
 
 ## Setup/Installation Requirements
 
@@ -37,7 +36,6 @@ _This app helps a user find the right karaoke song based on their mood, vibe and
 * _Open in browser_
 
 * _Mirror push to the new repository_
-
 
 ## Known Bugs
 
@@ -58,9 +56,5 @@ _To suggest changes, submit a pull request in the GitHub repository._
 * Bootstrap 4.0.0
 * Giphy API
 * Musixmatch API
-
-### License
-
-*MIT License*
 
 Copyright (c) 2018 **_Kaila Goff, Maggie Summers, Masen Matthews and Ron Craig_**
