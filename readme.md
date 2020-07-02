@@ -57,4 +57,4 @@ _To suggest changes, submit a pull request in the GitHub repository._
 * Giphy API
 * Musixmatch API
 
-Copyright (c) 2018 **_Kaila Goff, Maggie Summers, Masen Matthews and Ron Craig_**
+Copyright (c) 2020 **_Kaila Goff, Maggie Summers, Masen Matthews and Ron Craig_**
